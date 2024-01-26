@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ya4oi5o5wcld"]
+[gd_scene load_steps=7 format=3 uid="uid://ya4oi5o5wcld"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kyi40"]
 [ext_resource type="Script" path="res://scripts/PlayerAim.gd" id="2_e5tot"]
 [ext_resource type="Script" path="res://scripts/ProjectileSpawner.gd" id="2_u5ejm"]
+[ext_resource type="Script" path="res://scripts/EnemySpawner.gd" id="3_58hcw"]
 [ext_resource type="Script" path="res://scripts/DefaultPhysics.gd" id="4_upy5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dg3hd"]
@@ -12,7 +13,7 @@ size = Vector2(60, 60)
 motion_mode = 1
 
 [node name="Icon" type="Sprite2D" parent="."]
-z_index = 1
+z_index = 5
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_kyi40")
@@ -28,6 +29,10 @@ position = Vector2(32, 0)
 [node name="ProjectileSpawner" type="Timer" parent="."]
 wait_time = 0.2
 script = ExtResource("2_u5ejm")
+
+[node name="EnemySpawner" type="Timer" parent="."]
+wait_time = 0.1
+script = ExtResource("3_58hcw")
 
 [node name="PlayerAim" type="Node" parent="."]
 script = ExtResource("2_e5tot")

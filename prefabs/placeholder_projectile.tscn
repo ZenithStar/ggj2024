@@ -10,6 +10,7 @@ size = Vector2(24, 24)
 [node name="PlaceholderProjectile" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 rotation = 1.5708
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_kumwn")
