@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://ya4oi5o5wcld"]
+
+[ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kyi40"]
+[ext_resource type="Script" path="res://scripts/PlayerAim.gd" id="2_e5tot"]
+[ext_resource type="Script" path="res://scripts/ProjectileSpawner.gd" id="2_u5ejm"]
+[ext_resource type="Script" path="res://scripts/DefaultPhysics.gd" id="4_upy5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dg3hd"]
+size = Vector2(60, 60)
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+
+[node name="Icon" type="Sprite2D" parent="."]
+z_index = 1
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kyi40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dg3hd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(32, 0)
+
+[node name="ProjectileSpawner" type="Timer" parent="."]
+wait_time = 0.2
+script = ExtResource("2_u5ejm")
+
+[node name="PlayerAim" type="Node" parent="."]
+script = ExtResource("2_e5tot")
+
+[node name="DefaultPhysics" type="Node" parent="."]
+script = ExtResource("4_upy5q")
