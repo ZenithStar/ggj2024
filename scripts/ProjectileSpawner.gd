@@ -2,7 +2,7 @@ class_name ProjectileSpawner extends Timer
 
 @export var projectile_scene: PackedScene = preload("res://prefabs/placeholder_projectile.tscn")
 @export var spray_variance: float = PI/16.0
-@export var momentum_reaction_ratio: float = 0.05
+@export var momentum_reaction_ratio: float = 0.01
 
 func _ready():
 	timeout.connect(spawn)

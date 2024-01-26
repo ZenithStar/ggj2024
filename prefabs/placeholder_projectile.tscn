@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dk1b5q0xw0n4l"]
+[gd_scene load_steps=6 format=3 uid="uid://dk1b5q0xw0n4l"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kumwn"]
 [ext_resource type="Script" path="res://scripts/Lifespan.gd" id="2_y1rix"]
 [ext_resource type="Script" path="res://scripts/LinearVelocity.gd" id="3_b3bh7"]
+[ext_resource type="Script" path="res://scripts/OnHit.gd" id="4_plbtr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7obik"]
 size = Vector2(24, 24)
@@ -25,3 +26,6 @@ script = ExtResource("2_y1rix")
 
 [node name="LinearVelocity" type="Node" parent="."]
 script = ExtResource("3_b3bh7")
+
+[node name="OnHit" type="Node" parent="."]
+script = ExtResource("4_plbtr")

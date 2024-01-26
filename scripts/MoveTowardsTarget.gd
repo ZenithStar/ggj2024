@@ -1,7 +1,7 @@
 class_name MoveTowardsTarget extends Node
 
 @export var target: Node
-@export var velocity: float = 300.0
+@export var velocity: float = 100.0
 
 func _physics_process(delta):
 	if target:
