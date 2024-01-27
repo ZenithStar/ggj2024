@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cms4d6ufwbu32"]
+
+[ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_qygmq"]
+[ext_resource type="Script" path="res://scripts/Lifespan.gd" id="2_6iiyf"]
+[ext_resource type="Script" path="res://scripts/LinearVelocity.gd" id="3_4xymg"]
+[ext_resource type="Script" path="res://scripts/OnHit.gd" id="4_hfk5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7obik"]
+size = Vector2(24, 24)
+
+[node name="PlaceholderProjectile" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.72549, 0, 0.384314, 1)
+z_index = 1
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_qygmq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7obik")
+
+[node name="Lifespan" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+script = ExtResource("2_6iiyf")
+
+[node name="LinearVelocity" type="Node" parent="."]
+script = ExtResource("3_4xymg")
+
+[node name="OnHit" type="Node" parent="."]
+script = ExtResource("4_hfk5r")
