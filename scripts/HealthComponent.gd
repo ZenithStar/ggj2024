@@ -14,5 +14,9 @@ func update(_new_value):
 			var death_drop = on_death.instantiate()
 			death_drop.position = get_parent().position
 			Experience.add_child.call_deferred(death_drop)
-		get_parent().queue_free() # change to death animation when that's in
+		var tween = create_tween().bind_node(self)
+		visible = false
+		$"../CollisionShape2D".set_deferred("disabled", true)
+		tween.tween_method(func(val): $"../Sprite2D".material.set_shader_parameter("dissolve_value", val), 1.0, 0.0, 1.0)
+		tween.tween_callback(get_parent().queue_free)
 	

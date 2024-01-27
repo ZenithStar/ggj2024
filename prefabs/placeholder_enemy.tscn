@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://puxejj1005j1"]
+[gd_scene load_steps=10 format=3 uid="uid://puxejj1005j1"]
 
+[ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="1_0u4sm"]
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_36t3b"]
 [ext_resource type="Script" path="res://scripts/LimitDistanceToTarget.gd" id="2_0s7w4"]
 [ext_resource type="Script" path="res://scripts/TargetManager.gd" id="2_7mlqs"]
@@ -21,12 +22,14 @@ shape = SubResource("RectangleShape2D_0d5v8")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.501961, 0.501961, 1)
 z_index = 5
+material = ExtResource("1_0u4sm")
 rotation = 1.5708
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_36t3b")
 
 [node name="LArm" type="Sprite2D" parent="Sprite2D"]
 z_index = -1
+use_parent_material = true
 position = Vector2(-86, -108)
 rotation = -0.523599
 scale = Vector2(0.1, 1)
@@ -34,6 +37,7 @@ texture = ExtResource("1_36t3b")
 
 [node name="RArm" type="Sprite2D" parent="Sprite2D"]
 z_index = -1
+use_parent_material = true
 position = Vector2(86, -108)
 rotation = 0.523599
 scale = Vector2(0.1, 1)
