@@ -20,6 +20,7 @@ texture = ExtResource("1_kumwn")
 shape = SubResource("RectangleShape2D_7obik")
 
 [node name="Lifespan" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 autostart = true
 script = ExtResource("2_y1rix")

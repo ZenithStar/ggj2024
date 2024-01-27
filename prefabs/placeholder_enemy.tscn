@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://puxejj1005j1"]
+[gd_scene load_steps=9 format=3 uid="uid://puxejj1005j1"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_36t3b"]
 [ext_resource type="Script" path="res://scripts/LimitDistanceToTarget.gd" id="2_0s7w4"]
 [ext_resource type="Script" path="res://scripts/TargetManager.gd" id="2_7mlqs"]
 [ext_resource type="Script" path="res://scripts/MoveTowardsTarget.gd" id="2_scquu"]
 [ext_resource type="Script" path="res://scripts/HealthComponent.gd" id="4_jto8s"]
+[ext_resource type="PackedScene" uid="uid://nip75bkwf31j" path="res://prefabs/small_experience.tscn" id="5_sg4ip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d5v8"]
 size = Vector2(50, 50)
@@ -53,6 +54,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_27hbg")
 value = 50.0
 show_percentage = false
 script = ExtResource("4_jto8s")
+on_death = ExtResource("5_sg4ip")
 
 [node name="MoveTowardsTarget" type="Node" parent="."]
 script = ExtResource("2_scquu")

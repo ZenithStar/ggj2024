@@ -1,15 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://ya4oi5o5wcld"]
+[gd_scene load_steps=9 format=3 uid="uid://ya4oi5o5wcld"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kyi40"]
 [ext_resource type="Script" path="res://scripts/PlayerAim.gd" id="2_e5tot"]
 [ext_resource type="Script" path="res://scripts/ProjectileSpawner.gd" id="2_u5ejm"]
 [ext_resource type="Script" path="res://scripts/EnemySpawner.gd" id="3_58hcw"]
 [ext_resource type="Script" path="res://scripts/DefaultPhysics.gd" id="4_upy5q"]
+[ext_resource type="Script" path="res://scripts/ExperienceVacuum.gd" id="6_acjrj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dg3hd"]
 size = Vector2(60, 60)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_nkr3x"]
+radius = 200.0
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 15
+collision_mask = 15
 motion_mode = 1
 
 [node name="Icon" type="Sprite2D" parent="."]
@@ -39,3 +45,12 @@ script = ExtResource("2_e5tot")
 
 [node name="DefaultPhysics" type="Node" parent="."]
 script = ExtResource("4_upy5q")
+
+[node name="ExperienceVacuum" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+script = ExtResource("6_acjrj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExperienceVacuum"]
+shape = SubResource("CircleShape2D_nkr3x")

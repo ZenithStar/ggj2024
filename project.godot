@@ -15,6 +15,10 @@ run/main_scene="res://levels/survivors_level.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Experience="*res://scripts/ExperienceContainer.gd"
+
 [display]
 
 window/size/viewport_width=1280
@@ -61,6 +65,10 @@ down={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_4="Experience"
 
 [rendering]
 
