@@ -71,3 +71,4 @@ size_flags_horizontal = 3
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/Instructions" to="." method="_on_instructions_pressed"]

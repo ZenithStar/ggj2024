@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://dng64pevej5wx"]
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxTitleContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxTitleContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]Instructions[/center]"
+
+[node name="Spacing 1" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="goal" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Goal: Level up and try to stay alive against the masses!"
+
+[node name="Spacing 2" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="EscButtonContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EscButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer/EscButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "esc"
+
+[node name="EscLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "The escape button launches the pause menu which allows volume control and return to main menu"
+autowrap_mode = 3
+
+[node name="Spacing 3" type="ReferenceRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Spacing 4" type="ReferenceRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="WASDButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "WASD"
+
+[node name="MouseButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Mouse"
+
+[node name="JoyconButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Joycon"
+
+[node name="ArrowKeysButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Arrow Keys"
+
+[node name="AllInputsLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "This game accepts many different inputs to control the player character."
