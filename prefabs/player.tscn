@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ya4oi5o5wcld"]
+[gd_scene load_steps=10 format=3 uid="uid://ya4oi5o5wcld"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kyi40"]
 [ext_resource type="Script" path="res://scripts/PlayerAim.gd" id="2_e5tot"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/EnemySpawner.gd" id="3_58hcw"]
 [ext_resource type="Script" path="res://scripts/DefaultPhysics.gd" id="4_upy5q"]
 [ext_resource type="Script" path="res://scripts/ExperienceVacuum.gd" id="6_acjrj"]
+[ext_resource type="Script" path="res://scripts/ExperienceAccumulator.gd" id="6_pn75x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dg3hd"]
 size = Vector2(60, 60)
@@ -45,6 +46,9 @@ script = ExtResource("2_e5tot")
 
 [node name="DefaultPhysics" type="Node" parent="."]
 script = ExtResource("4_upy5q")
+
+[node name="ExperienceAccumulator" type="Node" parent="."]
+script = ExtResource("6_pn75x")
 
 [node name="ExperienceVacuum" type="Area2D" parent="."]
 collision_layer = 0
