@@ -44,6 +44,13 @@ text = "RESUME"
 [node name="HSeparator" type="HSeparator" parent="PauseMenu/VBoxContainer"]
 layout_mode = 2
 
+[node name="TitleMenuButton" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+text = "Quit To Title Menu"
+
+[node name="HSeparator2" type="HSeparator" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+
 [node name="Label2" type="Label" parent="PauseMenu/VBoxContainer"]
 layout_mode = 2
 text = "Volume"
@@ -56,4 +63,5 @@ max_value = 30.0
 value = 30.0
 
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/TitleMenuButton" to="." method="_on_title_menu_button_pressed"]
 [connection signal="value_changed" from="PauseMenu/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]

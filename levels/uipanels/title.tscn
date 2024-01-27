@@ -51,12 +51,7 @@ size_flags_vertical = 0
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "New Game"
-
-[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer"]
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 2
-text = "Continue"
+text = "Start"
 
 [node name="Instructions" type="Button" parent="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer"]
 layout_mode = 2
@@ -76,6 +71,5 @@ texture = ExtResource("2_ver5q")
 expand_mode = 4
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/New Game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/Instructions" to="." method="_on_instructions_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/Credits" to="." method="_on_credits_pressed"]
