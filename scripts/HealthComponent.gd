@@ -13,6 +13,6 @@ func update(_new_value):
 	if value <= 0.0:
 		death.emit()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	rotation = -get_parent().rotation
 	position = Vector2(-size.x/2.0, -size.y/2.0-offset).rotated(-get_parent().rotation)
