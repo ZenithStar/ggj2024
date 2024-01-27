@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://nip75bkwf31j"]
+[gd_scene load_steps=5 format=3 uid="uid://nip75bkwf31j"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_hjj3c"]
 [ext_resource type="Script" path="res://scripts/ExperienceDrop.gd" id="2_4r1vi"]
+[ext_resource type="Script" path="res://scripts/BasicMotion.gd" id="3_tl0jn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oharh"]
 
 [node name="SmallExperience" type="Area2D"]
-collision_layer = 8
+collision_layer = 16
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -19,3 +20,6 @@ texture = ExtResource("1_hjj3c")
 
 [node name="ExperienceDrop" type="Node" parent="."]
 script = ExtResource("2_4r1vi")
+
+[node name="BasicMotion" type="Node" parent="."]
+script = ExtResource("3_tl0jn")
