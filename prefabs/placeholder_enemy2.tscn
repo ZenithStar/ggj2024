@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8vppdy2n47l7"]
+
+[ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="1_btuya"]
+[ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="2_cdcrn"]
+[ext_resource type="Script" path="res://scripts/TargetManager.gd" id="3_dj4l2"]
+[ext_resource type="Script" path="res://scripts/LimitDistanceToTarget.gd" id="4_whh06"]
+[ext_resource type="Script" path="res://scripts/MoveTowardsTarget2.gd" id="5_blhgp"]
+[ext_resource type="Script" path="res://scripts/HealthComponent.gd" id="6_ks376"]
+[ext_resource type="Script" path="res://scripts/EnemyOnDeath.gd" id="7_12q31"]
+[ext_resource type="PackedScene" uid="uid://nip75bkwf31j" path="res://prefabs/small_experience.tscn" id="8_55npd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0d5v8"]
+size = Vector2(50, 50)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27hbg"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="PlaceholderEnemy" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0d5v8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.207843, 0.831373, 1)
+z_index = 5
+material = ExtResource("1_btuya")
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_cdcrn")
+
+[node name="LArm" type="Sprite2D" parent="Sprite2D"]
+z_index = -1
+use_parent_material = true
+position = Vector2(-86, -108)
+rotation = -0.523599
+scale = Vector2(0.1, 1)
+texture = ExtResource("2_cdcrn")
+
+[node name="LArm2" type="Sprite2D" parent="Sprite2D"]
+z_index = -1
+use_parent_material = true
+position = Vector2(-0.000463486, -127.5)
+scale = Vector2(0.1, 1)
+texture = ExtResource("2_cdcrn")
+
+[node name="RArm" type="Sprite2D" parent="Sprite2D"]
+z_index = -1
+use_parent_material = true
+position = Vector2(86, -108)
+rotation = 0.523599
+scale = Vector2(0.1, 1)
+texture = ExtResource("2_cdcrn")
+
+[node name="TargetManager" type="Node" parent="."]
+script = ExtResource("3_dj4l2")
+
+[node name="LimitDistanceToTarget" type="Node" parent="."]
+script = ExtResource("4_whh06")
+
+[node name="MoveTowardsTarget" type="Node" parent="."]
+script = ExtResource("5_blhgp")
+
+[node name="HealthComponent" type="ProgressBar" parent="."]
+offset_left = -32.0
+offset_top = -48.0
+offset_right = 32.0
+offset_bottom = -40.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_27hbg")
+value = 50.0
+show_percentage = false
+script = ExtResource("6_ks376")
+
+[node name="EnemyOnDeath" type="Node" parent="."]
+script = ExtResource("7_12q31")
+spawn_on_death = ExtResource("8_55npd")

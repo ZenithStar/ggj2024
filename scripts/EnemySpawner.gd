@@ -1,6 +1,7 @@
 class_name EnemySpawner extends Timer
 
 @export var enemy_scene: PackedScene = preload("res://prefabs/placeholder_enemy.tscn")
+@export var enemy_scene2: PackedScene = preload("res://prefabs/placeholder_enemy2.tscn")
 @export var max_enemies: int = 100
 
 func _ready():
