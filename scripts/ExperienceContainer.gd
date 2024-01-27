@@ -1,3 +1,5 @@
 class_name ExperienceContainer extends Node
 
-# vacuum all to player function goes here
+func clear():
+	for child in get_children():
+		child.queue_free()

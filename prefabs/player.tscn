@@ -42,6 +42,10 @@ script = ExtResource("2_cdfun")
 wait_time = 0.05
 script = ExtResource("2_u5ejm")
 
+[node name="LeftBeamSpawner" type="Timer" parent="."]
+wait_time = 0.2
+script = ExtResource("2_u5ejm")
+
 [node name="EnemySpawner" type="Timer" parent="."]
 wait_time = 0.1
 script = ExtResource("3_58hcw")

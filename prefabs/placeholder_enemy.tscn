@@ -20,6 +20,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_n2n35")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
 material = ExtResource("1_0u4sm")
 position = Vector2(2, 3)
 rotation = -1.0909
