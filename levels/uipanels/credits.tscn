@@ -71,6 +71,10 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="BackToMainMenu" type="Button" parent="VBoxContainer/HBoxContainer/ImageContainerPlaceholder"]
+layout_mode = 2
+text = "Back to Main Menu"
+
 [node name="ScrollboxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -156,14 +160,9 @@ fit_content = true
 layout_mode = 2
 text = "Robz"
 
-[node name="BackToMainMenu" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Back to Main Menu"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_x4efi")
 }
 
-[connection signal="pressed" from="VBoxContainer/BackToMainMenu" to="." method="_on_back_to_main_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ImageContainerPlaceholder/BackToMainMenu" to="." method="_on_back_to_main_menu_pressed"]
