@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://0ytxvvvlk4pa"]
+[gd_scene load_steps=3 format=3 uid="uid://0ytxvvvlk4pa"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_604ml"]
+[ext_resource type="Texture2D" uid="uid://bswig158fd1h2" path="res://assets/1701292276736245.jpg" id="2_ver5q"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -31,7 +32,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
-text = "[center]Sprout Clone[/center]"
+text = "[center]Spout x Survivors Clone[/center]"
 
 [node name="SpaceBetweenTitleAndButtons" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 25)
@@ -68,6 +69,11 @@ text = "Credits"
 [node name="ImageContainerPlaceholder" type="VBoxContainer" parent="MarginContainer/VBoxContainer/SplitScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/SplitScreen/ImageContainerPlaceholder"]
+layout_mode = 2
+texture = ExtResource("2_ver5q")
+expand_mode = 4
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/Continue" to="." method="_on_continue_pressed"]

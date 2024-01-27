@@ -12,6 +12,6 @@ func spawn():
 	var new_proj = projectile_scene.instantiate()
 	new_proj.rotation = get_parent().rotation + randf_range(-spray_variance, spray_variance)
 	new_proj.position = $"../SpawnPoint".global_position
-	new_proj.additional_velocity_vector = get_parent().velocity
+	new_proj.find_child("LinearVelocity").additional_velocity_vector = get_parent().velocity
 	get_parent().velocity -= Vector2.from_angle(new_proj.rotation) * new_proj.find_child("LinearVelocity").velocity * momentum_reaction_ratio
 	add_child(new_proj)
