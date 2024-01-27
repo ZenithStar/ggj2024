@@ -1,8 +1,8 @@
 class_name OnHit extends Node
 
 @export var floating_damage: PackedScene = preload("res://prefabs/floating_damage.tscn")
-@export var damage_min_range: float = 25.0
-@export var damage_max_range: float = 50.0
+@export var damage_min_range: float = 70.0
+@export var damage_max_range: float = 100.0
 
 func _ready():
 	get_parent().body_entered.connect(on_hit)
@@ -17,4 +17,3 @@ func on_hit(object):
 		floater.set_text("%d"%[int(damage)])
 		floater.position = get_parent().global_position
 		get_parent().add_sibling(floater)
-	get_parent().queue_free()

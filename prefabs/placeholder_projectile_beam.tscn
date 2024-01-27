@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5hyibcu7s3y2"]
+
+[ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_02qiq"]
+[ext_resource type="Script" path="res://scripts/Lifespan.gd" id="2_6mgnw"]
+[ext_resource type="Script" path="res://scripts/LinearVelocity.gd" id="3_hlqve"]
+[ext_resource type="Script" path="res://scripts/OnHit.gd" id="4_0ucix"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7obik"]
+size = Vector2(24, 24)
+
+[sub_resource type="GDScript" id="GDScript_88pha"]
+script/source = "extends Node
+
+@export var spray_variance: float = PI/16.0
+@export var momentum_reaction_ratio: float = 0.2
+@export var rate_of_fire: float = 5.0
+"
+
+[node name="PlaceholderProjectile" type="Area2D"]
+collision_layer = 0
+monitorable = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+rotation = 1.5708
+scale = Vector2(0.05, 0.9)
+texture = ExtResource("1_02qiq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(5, 0.25)
+shape = SubResource("RectangleShape2D_7obik")
+
+[node name="Lifespan" type="Timer" parent="."]
+one_shot = true
+autostart = true
+script = ExtResource("2_6mgnw")
+
+[node name="LinearVelocity" type="Node" parent="."]
+script = ExtResource("3_hlqve")
+
+[node name="OnHit" type="Node" parent="."]
+script = ExtResource("4_0ucix")
+
+[node name="WeaponProp" type="Node" parent="."]
+script = SubResource("GDScript_88pha")
+rate_of_fire = 1.0

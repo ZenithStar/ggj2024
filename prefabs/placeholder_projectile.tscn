@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dk1b5q0xw0n4l"]
+[gd_scene load_steps=7 format=3 uid="uid://dk1b5q0xw0n4l"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kumwn"]
 [ext_resource type="Script" path="res://scripts/Lifespan.gd" id="2_y1rix"]
@@ -7,6 +7,14 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7obik"]
 size = Vector2(24, 24)
+
+[sub_resource type="GDScript" id="GDScript_h7hdg"]
+script/source = "extends Node
+
+@export var spray_variance: float = PI/16.0
+@export var momentum_reaction_ratio: float = 0.01
+@export var rate_of_fire: float = 10.0
+"
 
 [node name="PlaceholderProjectile" type="Area2D"]
 collision_layer = 0
@@ -32,3 +40,6 @@ script = ExtResource("3_b3bh7")
 
 [node name="OnHit" type="Node" parent="."]
 script = ExtResource("4_plbtr")
+
+[node name="WeaponProp" type="Node" parent="."]
+script = SubResource("GDScript_h7hdg")
