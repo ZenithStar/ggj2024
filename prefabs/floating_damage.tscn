@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw2tk25vki8k7"]
+
+[ext_resource type="Script" path="res://scripts/FloatingDamage.gd" id="1_t7f8p"]
+
+[node name="Node2D" type="Node2D"]
+z_index = 10
+script = ExtResource("1_t7f8p")
+
+[node name="FloatingDamage" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.192157, 0.301961, 1)
+theme_override_colors/font_shadow_color = Color(0.741176, 0.662745, 0.921569, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "100"
