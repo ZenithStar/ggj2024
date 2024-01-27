@@ -48,11 +48,11 @@ layout_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 0
 columns = 2
 
 [node name="EscButtonContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/GridContainer"]
@@ -107,3 +107,19 @@ text = "Arrow Keys"
 layout_mode = 2
 size_flags_horizontal = 3
 text = "This game accepts many different inputs to control the player character."
+
+[node name="ReferenceRect" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="BackToMainMenu" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back to Main Menu"
