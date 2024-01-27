@@ -172,7 +172,6 @@ fit_content = true
 
 [node name="FloorTile" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
-text = "https://screamingbrainstudios.itch.io/tiny-texture-pack-2"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

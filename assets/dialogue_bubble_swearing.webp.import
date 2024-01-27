@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsbqwpki7472"
-path="res://.godot/imported/floor_tile.png-dd92439fa5dbd5b902dcd3f67dcd5daa.ctex"
+uid="uid://dp5ev7mn8p84t"
+path="res://.godot/imported/dialogue_bubble_swearing.webp-daafa8d1fc228c5021da2419dfa9b8d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/floor_tile.png"
-dest_files=["res://.godot/imported/floor_tile.png-dd92439fa5dbd5b902dcd3f67dcd5daa.ctex"]
+source_file="res://assets/dialogue_bubble_swearing.webp"
+dest_files=["res://.godot/imported/dialogue_bubble_swearing.webp-daafa8d1fc228c5021da2419dfa9b8d3.ctex"]
 
 [params]
 
