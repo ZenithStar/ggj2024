@@ -4,6 +4,7 @@ class_name HealthComponent extends ProgressBar
 signal death
 
 func _ready():
+	top_level = true
 	value = max_value
 	visible = false
 	value_changed.connect(update)
@@ -13,6 +14,5 @@ func update(_new_value):
 	if value <= 0.0:
 		death.emit()
 
-func _physics_process(_delta):
-	rotation = -get_parent().rotation
-	position = Vector2(-size.x/2.0, -size.y/2.0-offset).rotated(-get_parent().rotation)
+func _process(_delta):
+	global_position = get_parent().global_position + Vector2(-size.x/2.0, -size.y/2.0-offset)

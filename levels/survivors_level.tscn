@@ -5,9 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="2_5lnyh"]
 [ext_resource type="PackedScene" uid="uid://bcveciqax0v75" path="res://levels/uipanels/hud.tscn" id="4_w1ili"]
 
-[node name="SurvivorsLevel" type="Node2D"]
-
-[node name="PauseMenuOverlay" parent="." instance=ExtResource("1_pu2xq")]
+[node name="SurvivorsLevel" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_0h4wr")]
 
@@ -19,3 +17,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
 
 [node name="HUD" parent="." instance=ExtResource("4_w1ili")]
+layer = 10
+
+[node name="PauseMenuOverlay" parent="." instance=ExtResource("1_pu2xq")]
