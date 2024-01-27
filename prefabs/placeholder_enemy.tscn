@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/TargetManager.gd" id="2_7mlqs"]
 [ext_resource type="Script" path="res://scripts/MoveTowardsTarget.gd" id="2_scquu"]
 [ext_resource type="Script" path="res://scripts/HealthComponent.gd" id="4_jto8s"]
-[ext_resource type="PackedScene" uid="uid://nip75bkwf31j" path="res://prefabs/small_experience.tscn" id="5_sg4ip"]
+[ext_resource type="Script" path="res://scripts/EnemyOnDeath.gd" id="7_6byaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d5v8"]
 size = Vector2(50, 50)
@@ -49,6 +49,9 @@ script = ExtResource("2_7mlqs")
 [node name="LimitDistanceToTarget" type="Node" parent="."]
 script = ExtResource("2_0s7w4")
 
+[node name="MoveTowardsTarget" type="Node" parent="."]
+script = ExtResource("2_scquu")
+
 [node name="HealthComponent" type="ProgressBar" parent="."]
 offset_left = -32.0
 offset_top = -48.0
@@ -58,7 +61,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_27hbg")
 value = 50.0
 show_percentage = false
 script = ExtResource("4_jto8s")
-on_death = ExtResource("5_sg4ip")
 
-[node name="MoveTowardsTarget" type="Node" parent="."]
-script = ExtResource("2_scquu")
+[node name="EnemyOnDeath" type="Node" parent="."]
+script = ExtResource("7_6byaq")
