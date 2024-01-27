@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://ya4oi5o5wcld"]
+[gd_scene load_steps=13 format=3 uid="uid://ya4oi5o5wcld"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kyi40"]
 [ext_resource type="Script" path="res://scripts/Clock.gd" id="2_cdfun"]
 [ext_resource type="Script" path="res://scripts/PlayerAim.gd" id="2_e5tot"]
 [ext_resource type="Script" path="res://scripts/ProjectileSpawner.gd" id="2_u5ejm"]
 [ext_resource type="Script" path="res://scripts/EnemySpawner.gd" id="3_58hcw"]
+[ext_resource type="Script" path="res://scripts/BeamSpawner.gd" id="4_p6f2w"]
 [ext_resource type="Script" path="res://scripts/DefaultPhysics.gd" id="4_upy5q"]
 [ext_resource type="Script" path="res://scripts/ExperienceVacuum.gd" id="6_acjrj"]
 [ext_resource type="Script" path="res://scripts/ExperienceAccumulator.gd" id="6_pn75x"]
@@ -32,8 +33,11 @@ shape = SubResource("RectangleShape2D_dg3hd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="SpawnPoint" type="Node2D" parent="."]
+[node name="SpawnPointForward" type="Node2D" parent="."]
 position = Vector2(32, 0)
+
+[node name="SpawnPointLeft" type="Node2D" parent="."]
+position = Vector2(0, -32)
 
 [node name="Clock" type="Timer" parent="."]
 script = ExtResource("2_cdfun")
@@ -44,7 +48,7 @@ script = ExtResource("2_u5ejm")
 
 [node name="LeftBeamSpawner" type="Timer" parent="."]
 wait_time = 0.2
-script = ExtResource("2_u5ejm")
+script = ExtResource("4_p6f2w")
 
 [node name="EnemySpawner" type="Timer" parent="."]
 wait_time = 0.1

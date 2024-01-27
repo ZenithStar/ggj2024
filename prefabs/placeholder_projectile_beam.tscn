@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5hyibcu7s3y2"]
+[gd_scene load_steps=7 format=3 uid="uid://dutgso1tru51y"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_02qiq"]
 [ext_resource type="Script" path="res://scripts/Lifespan.gd" id="2_6mgnw"]
@@ -40,7 +40,6 @@ script = ExtResource("3_hlqve")
 
 [node name="OnHit" type="Node" parent="."]
 script = ExtResource("4_0ucix")
-damage_max_range = 99.0
 
 [node name="WeaponProp" type="Node" parent="."]
 script = SubResource("GDScript_88pha")
