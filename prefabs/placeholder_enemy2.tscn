@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8vppdy2n47l7"]
+[gd_scene load_steps=12 format=3 uid="uid://b8vppdy2n47l7"]
 
 [ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="1_btuya"]
+[ext_resource type="Script" path="res://scripts/EnemyProjectileSpawner.gd" id="1_mjtat"]
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="2_cdcrn"]
 [ext_resource type="Script" path="res://scripts/TargetManager.gd" id="3_dj4l2"]
 [ext_resource type="Script" path="res://scripts/LimitDistanceToTarget.gd" id="4_whh06"]
@@ -15,10 +16,16 @@ size = Vector2(50, 50)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27hbg"]
 bg_color = Color(1, 0, 0, 1)
 
-[node name="PlaceholderEnemy" type="Area2D"]
+[node name="PlaceholderEnemy2" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0d5v8")
+
+[node name="EnemyProjectileSpawnPoint" type="Node2D" parent="."]
+position = Vector2(82, 0)
+
+[node name="EnemyProjectileSpawner" type="Timer" parent="."]
+script = ExtResource("1_mjtat")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.207843, 0.831373, 1)

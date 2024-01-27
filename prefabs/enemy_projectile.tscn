@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cms4d6ufwbu32"]
+[gd_scene load_steps=7 format=3 uid="uid://cms4d6ufwbu32"]
 
+[ext_resource type="Script" path="res://scripts/enemy_projectile.gd" id="1_jdgmv"]
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_qygmq"]
 [ext_resource type="Script" path="res://scripts/Lifespan.gd" id="2_6iiyf"]
 [ext_resource type="Script" path="res://scripts/LinearVelocity.gd" id="3_4xymg"]
@@ -8,7 +9,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7obik"]
 size = Vector2(24, 24)
 
-[node name="PlaceholderProjectile" type="Area2D"]
+[node name="EnemyProjectile" type="Area2D"]
+script = ExtResource("1_jdgmv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.72549, 0, 0.384314, 1)
