@@ -33,6 +33,9 @@ script = ExtResource("2_6iiyf")
 
 [node name="LinearVelocity" type="Node" parent="."]
 script = ExtResource("3_4xymg")
+velocity = 700.0
 
 [node name="OnHit" type="Node" parent="."]
 script = ExtResource("4_hfk5r")
+damage_min_range = 8.0
+damage_max_range = 12.0

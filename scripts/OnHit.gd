@@ -12,7 +12,7 @@ func on_hit(object):
 	var health: HealthComponent = object.find_child("HealthComponent")
 	if health:
 		var damage = randf_range(damage_min_range, damage_max_range)
-		health.value -= randf_range(damage_min_range, damage_max_range)
+		health.value -= damage
 		var floater = floating_damage.instantiate()
 		floater.set_text("%d"%[int(damage)])
 		floater.position = get_parent().global_position
