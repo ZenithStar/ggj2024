@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://11cfst55tgg4"]
+[gd_scene load_steps=3 format=3 uid="uid://11cfst55tgg4"]
 
 [ext_resource type="PackedScene" uid="uid://ya4oi5o5wcld" path="res://prefabs/player.tscn" id="1_0h4wr"]
+[ext_resource type="PackedScene" uid="uid://c1ytgs7iese5" path="res://levels/uipanels/pause_menu.tscn" id="1_pu2xq"]
 
 [node name="SurvivorsLevel" type="Node2D"]
+
+[node name="PauseMenuOverlay" parent="." instance=ExtResource("1_pu2xq")]
 
 [node name="Player" parent="." instance=ExtResource("1_0h4wr")]
