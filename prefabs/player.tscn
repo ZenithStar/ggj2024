@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://ya4oi5o5wcld"]
+[gd_scene load_steps=11 format=3 uid="uid://ya4oi5o5wcld"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kyi40"]
+[ext_resource type="Script" path="res://scripts/Clock.gd" id="2_cdfun"]
 [ext_resource type="Script" path="res://scripts/PlayerAim.gd" id="2_e5tot"]
 [ext_resource type="Script" path="res://scripts/ProjectileSpawner.gd" id="2_u5ejm"]
 [ext_resource type="Script" path="res://scripts/EnemySpawner.gd" id="3_58hcw"]
@@ -32,6 +33,9 @@ shape = SubResource("RectangleShape2D_dg3hd")
 
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2(32, 0)
+
+[node name="Clock" type="Timer" parent="."]
+script = ExtResource("2_cdfun")
 
 [node name="ProjectileSpawner" type="Timer" parent="."]
 wait_time = 0.05

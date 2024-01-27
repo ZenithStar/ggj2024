@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://11cfst55tgg4"]
+[gd_scene load_steps=5 format=3 uid="uid://11cfst55tgg4"]
 
 [ext_resource type="PackedScene" uid="uid://ya4oi5o5wcld" path="res://prefabs/player.tscn" id="1_0h4wr"]
 [ext_resource type="PackedScene" uid="uid://c1ytgs7iese5" path="res://levels/uipanels/pause_menu.tscn" id="1_pu2xq"]
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="2_5lnyh"]
+[ext_resource type="PackedScene" uid="uid://bcveciqax0v75" path="res://levels/uipanels/hud.tscn" id="4_w1ili"]
 
 [node name="SurvivorsLevel" type="Node2D"]
 
@@ -16,3 +17,5 @@ texture_repeat = 2
 texture = ExtResource("2_5lnyh")
 region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
+
+[node name="HUD" parent="." instance=ExtResource("4_w1ili")]
