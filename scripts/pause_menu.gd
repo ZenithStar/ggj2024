@@ -35,3 +35,7 @@ func _on_volume_value_changed(value):
 	else:
 		AudioServer.set_bus_mute(bus, false)
 		
+
+
+func _on_title_menu_button_pressed():
+	get_tree().change_scene_to_file("res://levels/uipanels/title.tscn")

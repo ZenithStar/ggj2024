@@ -49,14 +49,16 @@ script = ExtResource("3_58hcw")
 [node name="PlayerAim" type="Node" parent="."]
 script = ExtResource("2_e5tot")
 
+[node name="HealthComponent" parent="." instance=ExtResource("8_togqh")]
+offset_right = 96.0
+offset_bottom = 12.0
+value = 100.0
+
 [node name="DefaultPhysics" type="Node" parent="."]
 script = ExtResource("4_upy5q")
 
 [node name="ExperienceAccumulator" type="Node" parent="."]
 script = ExtResource("6_pn75x")
-
-[node name="HealthComponent" parent="." instance=ExtResource("8_togqh")]
-value = 100.0
 
 [node name="ExperienceVacuum" type="Area2D" parent="."]
 collision_layer = 0
