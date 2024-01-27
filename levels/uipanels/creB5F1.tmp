@@ -1,0 +1,162 @@
+[gd_scene load_steps=5 format=3 uid="uid://c88l7nnkllhr0"]
+
+[ext_resource type="Script" path="res://scripts/credits.gd" id="1_cg6hb"]
+
+[sub_resource type="Animation" id="Animation_q2in2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(78, -130)]
+}
+
+[sub_resource type="Animation" id="Animation_lg73p"]
+resource_name = "scroll_animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(78, 50), Vector2(78, -130)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x4efi"]
+_data = {
+"RESET": SubResource("Animation_q2in2"),
+"scroll_animation": SubResource("Animation_lg73p")
+}
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cg6hb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="RichTextLabel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]Credits[/center]"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ImageContainerPlaceholder" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollboxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Container" type="Control" parent="VBoxContainer/HBoxContainer/ScrollboxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="CreditsLabelContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container"]
+custom_minimum_size = Vector2(400, 700)
+layout_mode = 0
+offset_left = 78.0
+offset_top = -130.0
+offset_right = 478.0
+offset_bottom = 2133.0
+size_flags_horizontal = 3
+
+[node name="DevelopersTitle" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+text = "Developers"
+fit_content = true
+
+[node name="ZenithStar" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "ZenithStar
+"
+
+[node name="Lunafutures" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "Lunafutures
+"
+
+[node name="Chris" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "Chris"
+
+[node name="aml2732" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "aml2732"
+
+[node name="spacing" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Art Department" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+text = "Art Department"
+fit_content = true
+
+[node name="Dameezy" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "Dameezy"
+
+[node name="spacing2" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Sound and Music" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+text = "Sound and Music"
+fit_content = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "placeholder"
+
+[node name="spacing3" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="WithUsInSpirit" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+text = "With us in Spirit"
+fit_content = true
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "Robz"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x4efi")
+}

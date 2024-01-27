@@ -21,3 +21,7 @@ func _on_continue_pressed():
 
 func _on_instructions_pressed():
 	get_tree().change_scene_to_file("res://levels/uipanels/instructions.tscn")
+
+
+func _on_credits_pressed():
+	get_tree().change_scene_to_file("res://levels/uipanels/credits.tscn")
