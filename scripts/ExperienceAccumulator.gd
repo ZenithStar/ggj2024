@@ -16,6 +16,5 @@ var current_exp: float = 0.0:
 			level += 1
 			level_up.emit(level)
 		changed.emit()
-		print( "Lvl:%s  %s/%s" %[level, current_exp, get_exp_to_level()])
 func get_exp_to_level() -> float:
 	return base_exp_per_level * exp_multi_per_level ** level

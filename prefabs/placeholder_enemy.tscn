@@ -5,17 +5,16 @@
 [ext_resource type="Script" path="res://scripts/LimitDistanceToTarget.gd" id="2_0s7w4"]
 [ext_resource type="Script" path="res://scripts/TargetManager.gd" id="2_7mlqs"]
 [ext_resource type="Script" path="res://scripts/MoveTowardsTarget.gd" id="2_scquu"]
-[ext_resource type="Script" path="res://scripts/HealthComponent.gd" id="4_jto8s"]
 [ext_resource type="PackedScene" uid="uid://nip75bkwf31j" path="res://prefabs/small_experience.tscn" id="5_sg4ip"]
+[ext_resource type="PackedScene" uid="uid://btjpjbvbo5wh5" path="res://prefabs/health_component.tscn" id="6_438ms"]
 [ext_resource type="Script" path="res://scripts/EnemyOnDeath.gd" id="7_6byaq"]
+[ext_resource type="Script" path="res://scripts/TouchDamageOverTime.gd" id="9_pdrpy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d5v8"]
 size = Vector2(50, 50)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27hbg"]
-bg_color = Color(1, 0, 0, 1)
-
 [node name="PlaceholderEnemy" type="Area2D"]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0d5v8")
@@ -53,16 +52,11 @@ script = ExtResource("2_0s7w4")
 [node name="MoveTowardsTarget" type="Node" parent="."]
 script = ExtResource("2_scquu")
 
-[node name="HealthComponent" type="ProgressBar" parent="."]
-offset_left = -32.0
-offset_top = -48.0
-offset_right = 32.0
-offset_bottom = -40.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_27hbg")
-value = 50.0
-show_percentage = false
-script = ExtResource("4_jto8s")
+[node name="HealthComponent" parent="." instance=ExtResource("6_438ms")]
 
 [node name="EnemyOnDeath" type="Node" parent="."]
 script = ExtResource("7_6byaq")
 spawn_on_death = ExtResource("5_sg4ip")
+
+[node name="TouchDamageOverTime" type="Node" parent="."]
+script = ExtResource("9_pdrpy")
