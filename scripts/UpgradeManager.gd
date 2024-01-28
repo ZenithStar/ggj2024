@@ -37,15 +37,15 @@ var PASSIVE_UPGRADES: Dictionary = {
 		}
 }
 var ACTIVE_UPGRADES: Dictionary = {
-	"front_spray" : { "name": "front_spray", "icon": preload("res://icon.svg"), "flavor_name": "Special Sauce",
+	"front_spray" : { "name": "front_spray", "icon": preload("res://assets/special_sauce.png"), "flavor_name": "Special Sauce",
 			"flavor_text": "Source: Don't ask.",
 			"tooltip": "", "max_level": 9
 		},
-	"left_beam" : { "name": "left_beam", "icon": preload("res://icon.svg"), "flavor_name": "Left Beam",
+	"left_beam" : { "name": "left_beam", "icon": preload("res://assets/extra_fries.png"), "flavor_name": "Side of fries",
 			"flavor_text": "Would you like some fries with that?",
 			"tooltip": "Would you like some fries with that?", "max_level": 9
 		},
-	"rear_blast" : { "name": "rear_blast", "icon": preload("res://icon.svg"), "flavor_name": "Spicy Chili",
+	"rear_blast" : { "name": "rear_blast", "icon": preload("res://assets/spicy_sauce.png"), "flavor_name": "Spicy Chili",
 			"flavor_text": "With the force of a thousand suns",
 			"tooltip": "What goes in must come out", "max_level": 9
 		},
