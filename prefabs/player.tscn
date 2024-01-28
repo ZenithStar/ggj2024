@@ -51,8 +51,8 @@ position = Vector2(75, 13)
 [node name="SpawnPointLeft" type="Node2D" parent="."]
 position = Vector2(6, -39)
 
-[node name="SpawnPointRight" type="Node2D" parent="."]
-position = Vector2(6, 34)
+[node name="SpawnPointRear" type="Node2D" parent="."]
+position = Vector2(-25, 0)
 
 [node name="Clock" type="Timer" parent="."]
 script = ExtResource("2_cdfun")
