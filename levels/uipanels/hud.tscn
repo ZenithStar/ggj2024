@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcveciqax0v75"]
+[gd_scene load_steps=4 format=3 uid="uid://bcveciqax0v75"]
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_fqi2e"]
 [ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_0sien"]
-[ext_resource type="Texture2D" uid="uid://dc2r0eidqfcoq" path="res://assets/UI_Different_Free_Wenrexa1/BarWindow.png" id="3_mvmgn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p7pok"]
 
@@ -73,13 +72,13 @@ script = ExtResource("2_0sien")
 auto_start = 0
 animation_enter = 2
 animation_leave = 3
-duration = 1.0
+duration = 0.5
 delay = 0.0
 transition_type = "BOUNCE"
 ease_type = "OUT"
 layout = NodePath("..")
 layout_id = "level_up_options"
-group = NodePath("../MarginContainer/HBoxContainer")
+group = NodePath("../MarginContainer/UpgradesSelection")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/LevelUp"]
 layout_mode = 1
@@ -91,22 +90,6 @@ theme_override_constants/margin_left = 128
 theme_override_constants/margin_top = 64
 theme_override_constants/margin_right = 128
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/LevelUp/MarginContainer"]
+[node name="UpgradesSelection" type="HBoxContainer" parent="Control/VBoxContainer/LevelUp/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-
-[node name="TextureButton" type="TextureButton" parent="Control/VBoxContainer/LevelUp/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 1
-texture_normal = ExtResource("3_mvmgn")
-
-[node name="TextureButton2" type="TextureButton" parent="Control/VBoxContainer/LevelUp/MarginContainer/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 1
-texture_normal = ExtResource("3_mvmgn")
-
-[node name="TextureButton3" type="TextureButton" parent="Control/VBoxContainer/LevelUp/MarginContainer/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 1
-texture_normal = ExtResource("3_mvmgn")

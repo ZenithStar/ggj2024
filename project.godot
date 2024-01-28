@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Experience="*res://scripts/ExperienceContainer.gd"
 Globals="*res://scripts/Globals.gd"
 GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
+Upgrades="*res://scripts/UpgradeManager.gd"
 
 [display]
 
