@@ -1,4 +1,5 @@
 class_name EnemyOnDeath extends Node
+# TODO: Rename this to be just "OnDeath" because we can use it for collectible as well
 
 @export var spawn_on_death: PackedScene
 
