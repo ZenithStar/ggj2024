@@ -7,13 +7,13 @@ func _ready():
 	var hack = blood.instantiate()
 	hack.position = get_viewport().get_visible_rect().size
 	add_child.call_deferred(hack)
-	$"MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/New Game".grab_focus()
+	$"CenterContainer/PanelContainer/ButtonContainer/New Game".grab_focus()
 
 func _notification(what):
 	match what:
 		NOTIFICATION_VISIBILITY_CHANGED:
-			if visible and $"MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/New Game".is_inside_tree():
-				$"MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/New Game".grab_focus()
+			if visible and $"CenterContainer/PanelContainer/ButtonContainer/New Game".is_inside_tree():
+				$"CenterContainer/PanelContainer/ButtonContainer/New Game".grab_focus()
 				
 func _on_new_game_pressed():
 	$Loading.visible = true

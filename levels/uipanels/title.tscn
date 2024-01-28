@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://0ytxvvvlk4pa"]
+[gd_scene load_steps=6 format=3 uid="uid://0ytxvvvlk4pa"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_604ml"]
 [ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_ke67k"]
-[ext_resource type="Texture2D" uid="uid://dy1hqmwa73vsm" path="res://assets/8ca2767d-d9a8-4b37-949a-815911324075-profile_image-300x300.png" id="3_ns25f"]
-[ext_resource type="Texture2D" uid="uid://fy1w0b6pjpum" path="res://assets/075.jpg" id="4_16olo"]
+[ext_resource type="Texture2D" uid="uid://lwqouwrhk1cx" path="res://assets/Into_The_Fryer.png" id="2_u3qkl"]
 [ext_resource type="PackedScene" uid="uid://c88l7nnkllhr0" path="res://levels/uipanels/credits.tscn" id="4_hjeaj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_38pi2"]
@@ -24,6 +23,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_604ml")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_u3qkl")
+expand_mode = 2
+
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource("2_ke67k")
 auto_start = 1
@@ -32,9 +41,9 @@ animation_leave = 1
 duration = 1.0
 layout = NodePath("..")
 layout_id = "title_menu"
-group = NodePath("../MarginContainer/VBoxContainer/SplitScreen/ButtonContainer")
+group = NodePath("../CenterContainer/PanelContainer/ButtonContainer")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,74 +51,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TitlePlaceholder" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(400, 70)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/normal_font_size = 50
-bbcode_enabled = true
-text = "[center]Into the Fryer[/center]"
-
-[node name="SpaceBetweenTitleAndButtons" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 25)
-layout_mode = 2
-
-[node name="SplitScreen" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/SplitScreen"]
+[node name="ButtonContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 
-[node name="New Game" type="Button" parent="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer"]
+[node name="New Game" type="Button" parent="CenterContainer/PanelContainer/ButtonContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Start"
 
-[node name="Instructions" type="Button" parent="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer"]
+[node name="Instructions" type="Button" parent="CenterContainer/PanelContainer/ButtonContainer"]
 layout_mode = 2
 disabled = true
 text = "Instructions"
 
-[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer"]
+[node name="Credits" type="Button" parent="CenterContainer/PanelContainer/ButtonContainer"]
 layout_mode = 2
 text = "Credits"
-
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/CenterContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-texture = ExtResource("3_ns25f")
-expand_mode = 2
-stretch_mode = 2
-
-[node name="ImageContainerPlaceholder" type="VBoxContainer" parent="MarginContainer/VBoxContainer/SplitScreen"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/SplitScreen/ImageContainerPlaceholder"]
-layout_mode = 2
-theme_override_constants/margin_left = 0
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/SplitScreen/ImageContainerPlaceholder/MarginContainer"]
-layout_mode = 2
-texture = ExtResource("4_16olo")
-expand_mode = 5
 
 [node name="Credits" parent="." instance=ExtResource("4_hjeaj")]
 visible = false
@@ -131,6 +94,6 @@ layout_mode = 2
 text = "Loading..."
 label_settings = SubResource("LabelSettings_38pi2")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/New Game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/Instructions" to="." method="_on_instructions_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/ButtonContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/ButtonContainer/Instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/ButtonContainer/Credits" to="." method="_on_credits_pressed"]
