@@ -161,7 +161,7 @@ fit_content = true
 
 [node name="MV" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
-text = "MV"
+text = "@itsv_asinvictory"
 
 [node name="Chris2" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
