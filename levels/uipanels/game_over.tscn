@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj4xr5mix3c28"]
+[gd_scene load_steps=2 format=3 uid="uid://bcdi3sg3tippo"]
 
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_lpydd"]
 

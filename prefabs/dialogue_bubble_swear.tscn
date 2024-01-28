@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://pkgdhedpqckr"]
+[gd_scene load_steps=5 format=3 uid="uid://jyac0b2ogwtv"]
 
 [ext_resource type="Texture2D" uid="uid://dp5ev7mn8p84t" path="res://assets/dialogue_bubble_swearing.webp" id="1_n2ca1"]
 [ext_resource type="Script" path="res://scripts/dialogue_bubble.gd" id="1_o1sfw"]

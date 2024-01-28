@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwa7o0qrrin05"]
+[gd_scene load_steps=10 format=3 uid="uid://b2psv1gt4xm24"]
 
 [ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="1_mwpqy"]
 [ext_resource type="Texture2D" uid="uid://dag5lpr51msgo" path="res://assets/balloon_red.png" id="1_txsjl"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/TargetManager.gd" id="3_xmgu3"]
 [ext_resource type="Script" path="res://scripts/HealthComponent.gd" id="4_y2f2n"]
 [ext_resource type="Script" path="res://scripts/EnemyOnDeath.gd" id="5_77gvk"]
-[ext_resource type="PackedScene" uid="uid://d2nprs2p6qgpw" path="res://prefabs/hard_liquor.tscn" id="7_w8ocn"]
+[ext_resource type="PackedScene" uid="uid://l0hbm5flgqkj" path="res://prefabs/hard_liquor.tscn" id="7_w8ocn"]
 [ext_resource type="AudioStream" uid="uid://coqyu7dabd8as" path="res://assets/popping.ogg" id="8_300ia"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72rau"]

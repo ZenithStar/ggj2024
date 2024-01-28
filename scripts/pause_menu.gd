@@ -2,9 +2,11 @@ extends CanvasLayer
 
 @export var enabled: bool = true
 signal paused(bool)
-func _ready():
-	unpause()
-
+func _enter_tree():
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+func _exit_tree():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
 func pause():
 	visible = true
 	get_tree().paused = true

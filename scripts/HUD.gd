@@ -28,10 +28,12 @@ func update_exp():
 func level_up(_level:int):
 	get_tree().paused = true
 	pause_menu.enabled = false
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	GuiTransitions.show("level_up_options")
 	$Control/VBoxContainer/LevelUp/MarginContainer/HBoxContainer/TextureButton.grab_focus()
 
 func resume():
 	GuiTransitions.hide("level_up_options")
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	get_tree().paused = false
 	pause_menu.enabled = true

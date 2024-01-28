@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2nprs2p6qgpw"]
+[gd_scene load_steps=6 format=3 uid="uid://l0hbm5flgqkj"]
 
 [ext_resource type="Texture2D" uid="uid://cfq3k5g3sdr1p" path="res://assets/hard_liquor.png" id="1_rlygg"]
-[ext_resource type="Script" path="res://scripts/HealOnTouch.gd" id="2_erxtg"]
-[ext_resource type="AudioStream" uid="uid://btv2fob8t3iav" path="res://assets/gulp.ogg" id="3_y4awq"]
+[ext_resource type="Script" path="res://scripts/HealOnTouch.gd" id="2_c05ra"]
+[ext_resource type="Script" path="res://scripts/BasicMotion.gd" id="3_75unw"]
+[ext_resource type="AudioStream" uid="uid://btv2fob8t3iav" path="res://assets/gulp.ogg" id="4_uxqcp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kyyt"]
-size = Vector2(12.8375, 25.245)
+size = Vector2(7.35638, 15.7572)
 
 [node name="HardLiquor" type="Area2D"]
 collision_layer = 16
@@ -13,20 +14,20 @@ collision_mask = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2.22845, -0.0533447)
-scale = Vector2(0.175, 0.175)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_rlygg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.48141, 3.51416)
+position = Vector2(1.95354, -1.99914)
 rotation = 0.445059
 scale = Vector2(5.225, 5.225)
 shape = SubResource("RectangleShape2D_8kyyt")
 
 [node name="HealOnTouch" type="Node" parent="."]
-script = ExtResource("2_erxtg")
+script = ExtResource("2_c05ra")
+
+[node name="BasicMotion" type="Node" parent="."]
+script = ExtResource("3_75unw")
 
 [node name="GulpSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_y4awq")
-
-[node name="AudioListener2D" type="AudioListener2D" parent="GulpSound"]
-current = true
+stream = ExtResource("4_uxqcp")
