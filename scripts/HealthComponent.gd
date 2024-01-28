@@ -14,10 +14,10 @@ func update(_new_value):
 	visible = value < max_value and value > 0.0
 	if value <= 0.0:
 		death.emit()
-	else:
-		var player = get_parent().find_child("AudioStreamPlayer2D")
-		if player:
-			player.play()
+	
+	var player = get_parent().find_child("AudioStreamPlayer2D")
+	if player:
+		player.play()
 
 func _process(_delta):
 	global_position = get_parent().global_position + Vector2(-size.x/2.0, -size.y/2.0-offset)
