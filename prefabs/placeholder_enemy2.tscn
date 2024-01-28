@@ -26,6 +26,7 @@ shape = SubResource("RectangleShape2D_0d5v8")
 position = Vector2(82, 0)
 
 [node name="EnemyProjectileSpawner" type="Timer" parent="."]
+wait_time = 3.0
 script = ExtResource("1_mjtat")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

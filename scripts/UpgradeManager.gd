@@ -39,7 +39,15 @@ var PASSIVE_UPGRADES: Dictionary = {
 var ACTIVE_UPGRADES: Dictionary = {
 	"front_spray" : { "name": "front_spray", "icon": preload("res://icon.svg"), "flavor_name": "Special Sauce",
 			"flavor_text": "Source: Don't ask.",
-			"tooltip": "lolwat", "scaling": Scaling.EXPONENTIAL, "value_per_level": 1.5, "max_level": 5
+			"tooltip": "", "max_level": 9
+		},
+	"left_beam" : { "name": "left_beam", "icon": preload("res://icon.svg"), "flavor_name": "Left Beam",
+			"flavor_text": "Would you like some fries with that?",
+			"tooltip": "Would you like some fries with that?", "max_level": 9
+		},
+	"rear_blast" : { "name": "rear_blast", "icon": preload("res://icon.svg"), "flavor_name": "Spicy Chili",
+			"flavor_text": "With the force of a thousand suns",
+			"tooltip": "What goes in must come out", "max_level": 9
 		},
 }
 

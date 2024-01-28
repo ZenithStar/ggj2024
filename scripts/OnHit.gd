@@ -27,4 +27,4 @@ func on_hit(object):
 	var before = object.global_position
 	object.global_position = object.global_position + knockback_vector
 	var after = object.global_position
-	prints(before, knockback_vector, after)
+	#prints(before, knockback_vector, after)
