@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddnu6p443bjwo"]
+
+[ext_resource type="Texture2D" uid="uid://cchtdoe2e3e27" path="res://assets/dot_small.png" id="1_y1tqj"]
+[ext_resource type="Script" path="res://scripts/blood.gd" id="2_u5nlu"]
+
+[sub_resource type="Curve" id="Curve_1w8e4"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.580952, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7paml"]
+curve = SubResource("Curve_1w8e4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fs2wx"]
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 420.78
+initial_velocity_max = 420.78
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_7paml")
+color = Color(0.929412, 0.0117647, 0.333333, 1)
+turbulence_enabled = true
+turbulence_noise_strength = 4.58
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+modulate = Color(0.768627, 0, 0.152941, 1)
+self_modulate = Color(0.686275, 0, 0, 1)
+amount = 761
+process_material = SubResource("ParticleProcessMaterial_fs2wx")
+texture = ExtResource("1_y1tqj")
+explosiveness = 1.0
+script = ExtResource("2_u5nlu")
+
+[node name="LifetimeTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="LifetimeTimer" to="." method="_on_lifetime_timer_timeout"]
