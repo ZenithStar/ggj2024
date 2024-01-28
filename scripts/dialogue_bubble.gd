@@ -17,7 +17,6 @@ var karen_messages = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	top_level = true
 	if get_node_or_null("ReferenceRect") and get_node("ReferenceRect").get_node_or_null("Label"):
 		var selected_text = karen_messages.pick_random()
 		get_node("ReferenceRect").get_node("Label").text = selected_text

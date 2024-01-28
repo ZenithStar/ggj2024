@@ -9,6 +9,7 @@ atlas = ExtResource("1_n2ca1")
 region = Rect2(161.297, 194.482, 603.635, 624.857)
 
 [node name="DialogueBubbleSwear" type="Node2D"]
+top_level = true
 script = ExtResource("1_o1sfw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

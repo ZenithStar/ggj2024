@@ -11,7 +11,7 @@ func on_death():
 		var death_drop = spawn_on_death.instantiate()
 		death_drop.position = get_parent().position
 		Experience.add_child.call_deferred(death_drop)
-	if $"../GenericShadow" and $"../GenericShadow".visible:
+	if get_node_or_null("../GenericShadow") and $"../GenericShadow".visible:
 		$"../GenericShadow".visible = false
 	var tween = create_tween().bind_node(self)
 	$"../CollisionShape2D".set_deferred("disabled", true)

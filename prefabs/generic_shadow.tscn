@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dypabr7c0m2n2"]
+[gd_scene load_steps=4 format=3 uid="uid://deytw7u23487h"]
 
 [ext_resource type="Texture2D" uid="uid://bw43prhg5id7y" path="res://assets/extraGameJamSprites.png" id="1_bud7v"]
 [ext_resource type="Script" path="res://scripts/generic_shadow.gd" id="1_ki1uu"]
@@ -9,6 +9,7 @@ region = Rect2(0, 40, 128, 60)
 
 [node name="GenericShadow" type="Node2D"]
 modulate = Color(1, 1, 1, 0.5)
+top_level = true
 script = ExtResource("1_ki1uu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

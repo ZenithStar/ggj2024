@@ -9,6 +9,7 @@ atlas = ExtResource("1_p86js")
 region = Rect2(17, 13.5, 550, 288)
 
 [node name="DialogueBubbleVariable" type="Node2D"]
+top_level = true
 script = ExtResource("1_r2c45")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

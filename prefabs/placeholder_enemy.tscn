@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://puxejj1005j1"]
 
 [ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="1_0u4sm"]
-[ext_resource type="PackedScene" uid="uid://dypabr7c0m2n2" path="res://prefabs/generic_shadow.tscn" id="1_1wh4j"]
+[ext_resource type="PackedScene" uid="uid://deytw7u23487h" path="res://prefabs/generic_shadow.tscn" id="1_1wh4j"]
 [ext_resource type="Script" path="res://scripts/LimitDistanceToTarget.gd" id="2_0s7w4"]
 [ext_resource type="Script" path="res://scripts/TargetManager.gd" id="2_7mlqs"]
 [ext_resource type="Texture2D" uid="uid://cy7xhoobn4611" path="res://assets/Karen_Top.png" id="2_b251j"]
