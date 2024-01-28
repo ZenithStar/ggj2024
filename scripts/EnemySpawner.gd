@@ -4,6 +4,7 @@ class_name EnemySpawner extends Timer
 @export var enemy_scene2: PackedScene = preload("res://prefabs/placeholder_enemy2.tscn")
 @export var max_enemies: int = 100
 var dialogue_bubble_swear: PackedScene = preload("res://prefabs/dialogue_bubble_swear.tscn")
+var dialogue_bubble_text: PackedScene = preload("res://prefabs/dialogue_bubble_variable.tscn")
 
 func _ready():
 	timeout.connect(spawn)
@@ -19,9 +20,14 @@ func true_some_percent_of_time(percent_of_time):
 func instantiate_base_karen():
 	var temp_enemy = enemy_scene.instantiate()
 	if true_some_percent_of_time(5): 
-		var swear_bubble = dialogue_bubble_swear.instantiate()
-		swear_bubble.scale = Vector2(0.2, 0.2)
-		temp_enemy.add_child(swear_bubble)
+		if true_some_percent_of_time(50):
+			var swear_bubble = dialogue_bubble_swear.instantiate()
+			swear_bubble.scale = Vector2(0.2, 0.2)
+			temp_enemy.add_child(swear_bubble)
+		else:
+			var text_bubble = dialogue_bubble_text.instantiate()
+			text_bubble.scale = Vector2(0.3, 0.3)
+			temp_enemy.add_child(text_bubble)
 	return temp_enemy
 
 func spawn():
