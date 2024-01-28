@@ -19,20 +19,20 @@ var PASSIVE_UPGRADES: Dictionary = {
 			"flavor_text": "\"Would you like to super-size that?\"",
 			"tooltip": "50% increased damage", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": 0.5, "max_level": 5
 		},
-	"rate_of_fire" : { "name": "rate_of_fire", "icon": preload("res://icon.svg"), "flavor_name": "Rate of Fire",
-			"flavor_text": "Increases rapid-fire responses to never-ending customer demands.",
+	"rate_of_fire" : { "name": "rate_of_fire", "icon": preload("res://assets/coffee.png"), "flavor_name": "8 oz. quad Americano",
+			"flavor_text": "Knock back a few shots before the next shift",
 			"tooltip": "5% less delay after abilities", "scaling": Scaling.EXPONENTIAL, "value_per_level": 0.95, "max_level": 5
 		},
-	"vacuum_range" : { "name": "vacuum_range", "icon": preload("res://icon.svg"), "flavor_name": "Vacuum Range",
-			"flavor_text": "Work sucks, but can it suck even harder?",
+	"vacuum_range" : { "name": "vacuum_range", "icon": preload("res://assets/squeegee.png"), "flavor_name": "Squeegee sceptre",
+			"flavor_text": "Lap up litter like a king",
 			"tooltip": "50% increased pick-up range", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": 0.5, "max_level": 5
 		},
-	"armor" : { "name": "armor", "icon": preload("res://icon.svg"), "flavor_name": "Armor",
-			"flavor_text": "This mascot costume isn't just for show.",
+	"armor" : { "name": "armor", "icon": preload("res://assets/polo.png"), "flavor_name": "Manager Polo",
+			"flavor_text": "Customer feedback is now even less effective",
 			"tooltip": "10% reduced damage taken", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": -0.1, "max_level": 5
 		},
-	"max_health" : { "name": "max_health", "icon": preload("res://icon.svg"), "flavor_name": "Max Health", 
-			"flavor_text": "Replacement for health insurance.",
+	"max_health" : { "name": "max_health", "icon": preload("res://assets/lunch_break.png"), "flavor_name": "Lunch break",
+			"flavor_text": "Sit down, eat, and forget the fryer for a fleeting moment",
 			"tooltip": "20% increased maximum health", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": 0.2, "max_level": 5
 		}
 }
