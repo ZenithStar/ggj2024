@@ -21,7 +21,7 @@ layer = 10
 
 [node name="PauseMenuOverlay" parent="." instance=ExtResource("1_pu2xq")]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="BGM" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("6_kye0u")
 autoplay = true
