@@ -90,7 +90,7 @@ custom_minimum_size = Vector2(400, 700)
 layout_mode = 0
 offset_left = 78.0
 offset_top = -130.0
-offset_right = 518.0
+offset_right = 552.0
 offset_bottom = 2594.0
 size_flags_horizontal = 3
 
@@ -114,6 +114,10 @@ text = "lunafutures
 layout_mode = 2
 text = "Chris"
 
+[node name="Robz2" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "Robz"
+
 [node name="aml2732" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
 text = "Aml2732"
@@ -135,6 +139,15 @@ text = "Dameezy"
 [node name="eandujar" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
 text = "Eandujar"
+
+[node name="Lunafutures3" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "lunafutures
+"
+
+[node name="Robz3" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "Robz"
 
 [node name="spacing2" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 custom_minimum_size = Vector2(0, 30)
@@ -163,29 +176,15 @@ text = "lunafutures
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
-[node name="WithUsInSpirit" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
-layout_mode = 2
-theme_override_font_sizes/normal_font_size = 25
-text = "With us in Spirit"
-fit_content = true
-
-[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
-layout_mode = 2
-text = "Robz"
-
-[node name="spacing4" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
 [node name="Resources" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 25
 text = "Resources"
 fit_content = true
 
-[node name="FloorTile" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+[node name="JunoBalloon" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
-text = "Placeholder"
+text = "https://pixabay.com/vectors/balloon-birthday-balloon-25739/"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

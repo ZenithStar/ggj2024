@@ -11,7 +11,7 @@ func _ready():
 	
 func true_some_percent_of_time(percent_of_time):
 	var random_number = randi_range(0,100)
-	if random_number > 0 and random_number <= percent_of_time: 
+	if 0 <= random_number and random_number <= percent_of_time: 
 		return true
 	else: 
 		return false
@@ -36,7 +36,7 @@ func get_elapsed_seconds():
 func get_max_enemies():
 	var sec = get_elapsed_seconds()
 	if sec <= 30:
-		return 10
+		return 12
 	elif sec <= 60:
 		return 20
 	elif sec <= 90:
@@ -47,7 +47,7 @@ func get_max_enemies():
 func get_easier_enemy_chance():
 	var sec = get_elapsed_seconds()
 	if sec <= 40:
-		return 101
+		return 100
 	elif sec <= 60:
 		return 99
 	elif sec <= 90:
