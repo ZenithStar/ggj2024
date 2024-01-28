@@ -7,30 +7,38 @@ enum Scaling{
 }
 
 var PASSIVE_UPGRADES: Dictionary = {
-	"traction" : { "name": "traction", "icon": preload("res://icon.svg"), "flavor_name": "Safety Boots", "flavor_text": "this flavor text tastes amazing",
+	"traction" : { "name": "traction", "icon": preload("res://icon.svg"), "flavor_name": "Safety Boots", 
+			"flavor_text": "With every greasy floor you've mopped, you learn to stand your ground against the slippery demands of the daily grind.",
 			"tooltip": "50% more traction", "scaling": Scaling.EXPONENTIAL, "value_per_level": 1.5, "max_level": 5
 		},
-	"added_damage" : { "name": "added_damage", "icon": preload("res://icon.svg"), "flavor_name": "Added Damage", "flavor_text": "this flavor text tastes amazing",
+	"added_damage" : { "name": "added_damage", "icon": preload("res://icon.svg"), "flavor_name": "Added Damage", 
+			"flavor_text": "\"Would you like to super-size that?\"",
 			"tooltip": "5 additional damage per hit", "scaling": Scaling.ADDITIVE, "value_per_level": 5.0, "max_level": 5
 		},
-	"damage_multiplier" : { "name": "damage_multiplier", "icon": preload("res://icon.svg"), "flavor_name": "Damage Multi", "flavor_text": "this flavor text tastes amazing",
+	"damage_multiplier" : { "name": "damage_multiplier", "icon": preload("res://icon.svg"), "flavor_name": "Damage Multi", 
+			"flavor_text": "Time to exceed customer expectations.",
 			"tooltip": "50% increased damage", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": 0.5, "max_level": 5
 		},
-	"rate_of_fire" : { "name": "rate_of_fire", "icon": preload("res://icon.svg"), "flavor_name": "Rate of Fire", "flavor_text": "this flavor text tastes amazing",
+	"rate_of_fire" : { "name": "rate_of_fire", "icon": preload("res://icon.svg"), "flavor_name": "Rate of Fire",
+			"flavor_text": "Increases rapid-fire responses to never-ending customer demands.",
 			"tooltip": "5% less delay after abilities", "scaling": Scaling.EXPONENTIAL, "value_per_level": 0.95, "max_level": 5
 		},
-	"vacuum_range" : { "name": "vacuum_range", "icon": preload("res://icon.svg"), "flavor_name": "Vacuum Range", "flavor_text": "this flavor text tastes amazing",
+	"vacuum_range" : { "name": "vacuum_range", "icon": preload("res://icon.svg"), "flavor_name": "Vacuum Range",
+			"flavor_text": "Work sucks, but can it suck even harder?",
 			"tooltip": "50% increased pick-up range", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": 0.5, "max_level": 5
 		},
-	"armor" : { "name": "armor", "icon": preload("res://icon.svg"), "flavor_name": "Armor", "flavor_text": "this flavor text tastes amazing",
+	"armor" : { "name": "armor", "icon": preload("res://icon.svg"), "flavor_name": "Armor",
+			"flavor_text": "This mascot costume isn't just for show.",
 			"tooltip": "10% reduced damage taken", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": -0.1, "max_level": 5
 		},
-	"max_health" : { "name": "max_health", "icon": preload("res://icon.svg"), "flavor_name": "Max Health", "flavor_text": "this flavor text tastes amazing",
+	"max_health" : { "name": "max_health", "icon": preload("res://icon.svg"), "flavor_name": "Max Health", 
+			"flavor_text": "Replacement for health insurance.",
 			"tooltip": "20% increased maximum health", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": 0.2, "max_level": 5
 		}
 }
 var ACTIVE_UPGRADES: Dictionary = {
-	"front_spray" : { "name": "front_spray", "icon": preload("res://icon.svg"), "flavor_name": "Special Sauce", "flavor_text": "this flavor text tastes amazing",
+	"front_spray" : { "name": "front_spray", "icon": preload("res://icon.svg"), "flavor_name": "Special Sauce",
+			"flavor_text": "Source: Don't ask.",
 			"tooltip": "lolwat", "scaling": Scaling.EXPONENTIAL, "value_per_level": 1.5, "max_level": 5
 		},
 }
