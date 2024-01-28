@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2nprs2p6qgpw"]
+[gd_scene load_steps=5 format=3 uid="uid://d2nprs2p6qgpw"]
 
 [ext_resource type="Texture2D" uid="uid://cfq3k5g3sdr1p" path="res://assets/hard_liquor.png" id="1_rlygg"]
 [ext_resource type="Script" path="res://scripts/HealOnTouch.gd" id="2_erxtg"]
+[ext_resource type="AudioStream" uid="uid://btv2fob8t3iav" path="res://assets/gulp.ogg" id="3_y4awq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kyyt"]
 size = Vector2(12.8375, 25.245)
@@ -23,3 +24,9 @@ shape = SubResource("RectangleShape2D_8kyyt")
 
 [node name="HealOnTouch" type="Node" parent="."]
 script = ExtResource("2_erxtg")
+
+[node name="GulpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_y4awq")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="GulpSound"]
+current = true
