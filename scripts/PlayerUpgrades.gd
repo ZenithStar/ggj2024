@@ -7,7 +7,7 @@ func _ready():
 
 func _upgrade_max_health():
 	var healthNode = get_node("../HealthComponent")
-	healthNode.max_value += Upgrades.modify_by(healthNode.max_health, "max_health")
+	healthNode.max_value += Upgrades.modify_by(healthNode.max_value, "max_health")
 
 func _upgrade_armor():
 	#Todo implement
