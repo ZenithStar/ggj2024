@@ -9,8 +9,8 @@ outline_size = 6
 outline_color = Color(0, 0, 0, 1)
 
 [node name="UpgradeIcon" type="PanelContainer"]
-offset_right = 48.0
-offset_bottom = 48.0
+offset_right = 64.0
+offset_bottom = 64.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_fcfdl")
