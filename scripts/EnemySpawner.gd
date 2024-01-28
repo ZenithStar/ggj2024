@@ -11,7 +11,7 @@ func _ready():
 	
 func true_some_percent_of_time(percent_of_time):
 	var random_number = randi_range(0,100)
-	if random_number > 0 and random_number <= percent_of_time: 
+	if 0 <= random_number and random_number <= percent_of_time: 
 		return true
 	else: 
 		return false
