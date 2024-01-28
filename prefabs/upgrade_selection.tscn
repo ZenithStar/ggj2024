@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="2_nb77h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m70bb"]
-font_size = 32
+font_size = 30
 font_color = Color(0, 1, 0.901961, 1)
 outline_size = 4
 outline_color = Color(0.372549, 0.32549, 1, 1)
