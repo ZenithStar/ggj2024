@@ -91,7 +91,7 @@ layout_mode = 0
 offset_left = 78.0
 offset_top = -130.0
 offset_right = 518.0
-offset_bottom = 2513.0
+offset_bottom = 2594.0
 size_flags_horizontal = 3
 
 [node name="DevelopersTitle" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
