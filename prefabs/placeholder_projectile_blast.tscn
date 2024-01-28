@@ -1,15 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://duj8fje6pv7s1"]
+[gd_scene load_steps=4 format=3 uid="uid://duj8fje6pv7s1"]
 
 [ext_resource type="Script" path="res://scripts/Lifespan.gd" id="2_qgntt"]
+[ext_resource type="Texture2D" uid="uid://cm4n2tipmblq4" path="res://assets/fart.png" id="3_npdiq"]
 [ext_resource type="Script" path="res://scripts/OnHit.gd" id="4_xm51m"]
 
 [node name="PlaceholderProjectile" type="Area2D"]
 collision_layer = 0
 monitorable = false
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.4, 0.72549, 0.0745098, 0.501961)
-polygon = PackedVector2Array(-1, 0, 150, -60, 150, 60)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 0, 150, 60, 150, -60)
@@ -24,3 +21,8 @@ script = ExtResource("2_qgntt")
 script = ExtResource("4_xm51m")
 damage_min_range = 100.0
 damage_max_range = 150.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(86, -9)
+scale = Vector2(0.362375, 0.507168)
+texture = ExtResource("3_npdiq")
