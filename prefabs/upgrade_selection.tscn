@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dc2r0eidqfcoq" path="res://assets/UI_Different_Free_Wenrexa1/BarWindow.png" id="1_x827y"]
 [ext_resource type="Script" path="res://prefabs/upgrade_selection.gd" id="2_eoiap"]
-[ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="2_nb77h"]
+[ext_resource type="Texture2D" uid="uid://cbck7uko51jmp" path="res://assets/shoes.png" id="3_douma"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m70bb"]
 font_size = 36
@@ -56,9 +56,11 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Icon" type="TextureRect" parent="MarginContainer/HFlowContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("2_nb77h")
+texture = ExtResource("3_douma")
+expand_mode = 1
 
 [node name="Level" type="Label" parent="MarginContainer/HFlowContainer"]
 layout_mode = 2

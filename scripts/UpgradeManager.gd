@@ -7,16 +7,16 @@ enum Scaling{
 }
 
 var PASSIVE_UPGRADES: Dictionary = {
-	"traction" : { "name": "traction", "icon": preload("res://icon.svg"), "flavor_name": "Safety Boots", 
-			"flavor_text": "With every greasy floor you've mopped, you learn to stand your ground against the slippery demands of the daily grind.",
+	"traction" : { "name": "traction", "icon": preload("res://assets/shoes.png"), "flavor_name": "Ronald Rubbers", 
+			"flavor_text": "Stand firm with less slippage",
 			"tooltip": "50% more traction", "scaling": Scaling.EXPONENTIAL, "value_per_level": 1.5, "max_level": 5
 		},
-	"added_damage" : { "name": "added_damage", "icon": preload("res://icon.svg"), "flavor_name": "Added Damage", 
-			"flavor_text": "\"Would you like to super-size that?\"",
+	"added_damage" : { "name": "added_damage", "icon": preload("res://assets/ketchup.png"), "flavor_name": "Extra ketchup", 
+			"flavor_text": "More flavor in every bite",
 			"tooltip": "5 additional damage per hit", "scaling": Scaling.ADDITIVE, "value_per_level": 5.0, "max_level": 5
 		},
-	"damage_multiplier" : { "name": "damage_multiplier", "icon": preload("res://icon.svg"), "flavor_name": "Damage Multi", 
-			"flavor_text": "Time to exceed customer expectations.",
+	"damage_multiplier" : { "name": "damage_multiplier", "icon": preload("res://assets/supersizeme.png"), "flavor_name": "Supersize Me", 
+			"flavor_text": "\"Would you like to super-size that?\"",
 			"tooltip": "50% increased damage", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": 0.5, "max_level": 5
 		},
 	"rate_of_fire" : { "name": "rate_of_fire", "icon": preload("res://icon.svg"), "flavor_name": "Rate of Fire",
