@@ -58,7 +58,6 @@ wait_time = 0.1
 script = ExtResource("3_58hcw")
 
 [node name="CollectibleSpawner" type="Timer" parent="."]
-wait_time = 10.0
 script = ExtResource("5_mah1a")
 
 [node name="PlayerAim" type="Node" parent="."]
