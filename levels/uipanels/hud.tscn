@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcveciqax0v75"]
+[gd_scene load_steps=7 format=3 uid="uid://bcveciqax0v75"]
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_fqi2e"]
 [ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_0sien"]
 [ext_resource type="PackedScene" uid="uid://bkgavysh5a7l0" path="res://prefabs/upgrade_selection.tscn" id="3_fsw3f"]
+[ext_resource type="AudioStream" uid="uid://dexh7ciqyj6bk" path="res://assets/level_up.ogg" id="4_h3yt7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p7pok"]
 
@@ -108,3 +109,6 @@ layout_mode = 2
 
 [node name="UpgradeSelection2" parent="Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection" instance=ExtResource("3_fsw3f")]
 layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_h3yt7")
