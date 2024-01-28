@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ya4oi5o5wcld"]
+[gd_scene load_steps=20 format=3 uid="uid://ya4oi5o5wcld"]
 
 [ext_resource type="AudioStream" uid="uid://cve74whj61dyg" path="res://assets/player_hit.ogg" id="1_bdfp3"]
 [ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="1_so8e8"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://btjpjbvbo5wh5" path="res://prefabs/health_component.tscn" id="8_togqh"]
 [ext_resource type="Script" path="res://scripts/PlayerOnDeath.gd" id="10_p0s7w"]
 [ext_resource type="Script" path="res://scripts/BloodGenerator.gd" id="15_siy25"]
+[ext_resource type="Script" path="res://scripts/PlayerUpgrades.gd" id="17_yyxbs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7jpfp"]
 radius = 30.0
@@ -107,3 +108,6 @@ stream = ExtResource("1_bdfp3")
 
 [node name="BloodGenerator" type="Node" parent="."]
 script = ExtResource("15_siy25")
+
+[node name="PlayerUpgrades" type="Node" parent="."]
+script = ExtResource("17_yyxbs")
