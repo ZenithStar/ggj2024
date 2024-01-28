@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_fqi2e"]
 [ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_0sien"]
-[ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="2_18484"]
+[ext_resource type="Texture2D" uid="uid://dc2r0eidqfcoq" path="res://assets/UI_Different_Free_Wenrexa1/BarWindow.png" id="3_mvmgn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p7pok"]
 
@@ -64,16 +64,22 @@ size_flags_vertical = 0
 text = "Kills: 4566 "
 
 [node name="LevelUp" type="Control" parent="Control/VBoxContainer"]
+process_mode = 3
 layout_mode = 2
+mouse_filter = 2
 
 [node name="GuiTransition" type="Node" parent="Control/VBoxContainer/LevelUp"]
 script = ExtResource("2_0sien")
 auto_start = 0
-animation_enter = 6
-animation_leave = 6
-transition_type = "ELASTIC"
+animation_enter = 2
+animation_leave = 3
+duration = 1.0
+delay = 0.0
+transition_type = "BOUNCE"
+ease_type = "OUT"
 layout = NodePath("..")
-group = NodePath("../MarginContainer/VBoxContainer")
+layout_id = "level_up_options"
+group = NodePath("../MarginContainer/HBoxContainer")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/LevelUp"]
 layout_mode = 1
@@ -85,32 +91,22 @@ theme_override_constants/margin_left = 128
 theme_override_constants/margin_top = 64
 theme_override_constants/margin_right = 128
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/LevelUp/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/LevelUp/MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
-[node name="UpgradeSlot1" type="NinePatchRect" parent="Control/VBoxContainer/LevelUp/MarginContainer/VBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/VBoxContainer/LevelUp/MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("2_18484")
-patch_margin_left = 20
-patch_margin_top = 20
-patch_margin_right = 20
-patch_margin_bottom = 20
+size_flags_horizontal = 4
+mouse_filter = 1
+texture_normal = ExtResource("3_mvmgn")
 
-[node name="UpgradeSlot2" type="NinePatchRect" parent="Control/VBoxContainer/LevelUp/MarginContainer/VBoxContainer"]
+[node name="TextureButton2" type="TextureButton" parent="Control/VBoxContainer/LevelUp/MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("2_18484")
-patch_margin_left = 20
-patch_margin_top = 20
-patch_margin_right = 20
-patch_margin_bottom = 20
+mouse_filter = 1
+texture_normal = ExtResource("3_mvmgn")
 
-[node name="UpgradeSlot3" type="NinePatchRect" parent="Control/VBoxContainer/LevelUp/MarginContainer/VBoxContainer"]
+[node name="TextureButton3" type="TextureButton" parent="Control/VBoxContainer/LevelUp/MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("2_18484")
-patch_margin_left = 20
-patch_margin_top = 20
-patch_margin_right = 20
-patch_margin_bottom = 20
+mouse_filter = 1
+texture_normal = ExtResource("3_mvmgn")

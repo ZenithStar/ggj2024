@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ya4oi5o5wcld" path="res://prefabs/player.tscn" id="1_0h4wr"]
 [ext_resource type="PackedScene" uid="uid://c1ytgs7iese5" path="res://levels/uipanels/pause_menu.tscn" id="1_pu2xq"]
-[ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="2_5lnyh"]
+[ext_resource type="Texture2D" uid="uid://mb6mjehth7i7" path="res://assets/TileFloor_V1.png" id="2_wr0bw"]
 [ext_resource type="PackedScene" uid="uid://bcveciqax0v75" path="res://levels/uipanels/hud.tscn" id="4_w1ili"]
 
 [node name="SurvivorsLevel" type="Node"]
@@ -10,11 +10,8 @@
 [node name="Player" parent="." instance=ExtResource("1_0h4wr")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.2)
-texture_repeat = 2
-texture = ExtResource("2_5lnyh")
-region_enabled = true
-region_rect = Rect2(0, 0, 4096, 4096)
+z_index = -1
+texture = ExtResource("2_wr0bw")
 
 [node name="HUD" parent="." instance=ExtResource("4_w1ili")]
 layer = 10

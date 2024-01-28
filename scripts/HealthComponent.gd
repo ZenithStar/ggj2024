@@ -14,10 +14,11 @@ func update(_new_value):
 	visible = value < max_value and value > 0.0
 	if value <= 0.0:
 		death.emit()
-	
-	var player = get_parent().find_child("AudioStreamPlayer2D")
+
+	var player: AudioStreamPlayer2D = get_parent().find_child("AudioStreamPlayer2D")
 	if player:
 		player.play()
+		player.pitch_scale = randf_range(0.8, 1.5)
 
 func _process(_delta):
 	global_position = get_parent().global_position + Vector2(-size.x/2.0, -size.y/2.0-offset)

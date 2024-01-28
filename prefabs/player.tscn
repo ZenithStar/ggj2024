@@ -36,6 +36,9 @@ shape = SubResource("RectangleShape2D_dg3hd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
 [node name="SpawnPointForward" type="Node2D" parent="."]
 position = Vector2(32, 0)
 
@@ -58,6 +61,7 @@ wait_time = 0.1
 script = ExtResource("3_58hcw")
 
 [node name="CollectibleSpawner" type="Timer" parent="."]
+wait_time = 10.0
 script = ExtResource("5_mah1a")
 
 [node name="PlayerAim" type="Node" parent="."]
@@ -88,6 +92,3 @@ script = ExtResource("10_p0s7w")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_bdfp3")
-
-[node name="AudioListener2D" type="AudioListener2D" parent="AudioStreamPlayer2D"]
-current = true

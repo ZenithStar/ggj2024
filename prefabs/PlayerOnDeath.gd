@@ -6,6 +6,7 @@ func _ready():
 
 func on_death():
 	$"../AudioStreamPlayer2D".set_stream("assets/player_death.ogg")
+	$"../AudioStreamPlayer2D".pitch_scale = 1.0
 	var tween = create_tween().bind_node(self)
 	$"../CollisionShape2D".set_deferred("disabled", true)
 	tween.tween_method(func(val): $"../Sprite2D".material.set_shader_parameter("dissolve_value", val), 1.0, 0.0, 1.0)

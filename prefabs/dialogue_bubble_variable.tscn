@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn0gxo7j1uvce"]
+
+[ext_resource type="Texture2D" uid="uid://ctt0t0dixht3e" path="res://assets/wide_dialogue_bubble.webp" id="1_p86js"]
+[ext_resource type="Script" path="res://scripts/dialogue_bubble.gd" id="1_r2c45"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37hhn"]
+atlas = ExtResource("1_p86js")
+region = Rect2(17, 13.5, 550, 288)
+
+[node name="DialogueBubbleVariable" type="Node2D"]
+script = ExtResource("1_r2c45")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-278, -148)
+texture = SubResource("AtlasTexture_37hhn")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+offset_left = -476.0
+offset_top = -220.0
+offset_right = -74.0
+offset_bottom = -104.0
+
+[node name="Label" type="Label" parent="ReferenceRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "I want to speak to your manager!"
+autowrap_mode = 3

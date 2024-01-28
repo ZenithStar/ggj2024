@@ -107,7 +107,7 @@ text = "ZenithStar
 
 [node name="Lunafutures" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
-text = "Lunafutures
+text = "lunafutures
 "
 
 [node name="Chris" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
@@ -116,7 +116,7 @@ text = "Chris"
 
 [node name="aml2732" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
-text = "aml2732"
+text = "Aml2732"
 
 [node name="spacing" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 custom_minimum_size = Vector2(0, 30)
@@ -132,6 +132,10 @@ fit_content = true
 layout_mode = 2
 text = "Dameezy"
 
+[node name="eandujar" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "Eandujar"
+
 [node name="spacing2" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
@@ -142,9 +146,18 @@ theme_override_font_sizes/normal_font_size = 25
 text = "Sound and Music"
 fit_content = true
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+[node name="MV" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
-text = "placeholder"
+text = "MV"
+
+[node name="Chris2" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "Chris"
+
+[node name="Lunafutures2" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
+layout_mode = 2
+text = "lunafutures
+"
 
 [node name="spacing3" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 custom_minimum_size = Vector2(0, 30)
@@ -172,6 +185,7 @@ fit_content = true
 
 [node name="FloorTile" type="Label" parent="VBoxContainer/HBoxContainer/ScrollboxContainer/Container/CreditsLabelContainer"]
 layout_mode = 2
+text = "Placeholder"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

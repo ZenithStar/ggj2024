@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+@export var enabled: bool = true
 signal paused(bool)
 func _ready():
 	unpause()
@@ -17,7 +18,7 @@ func unpause():
 	paused.emit(false)
 
 func _unhandled_input(event):
-	if event.is_action("toggle_pause"):
+	if enabled and event.is_action("toggle_pause"):
 		if event.is_pressed():
 			if get_tree().paused:
 				unpause()
