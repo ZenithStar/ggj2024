@@ -53,7 +53,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
-text = "[center]Into the Frier[/center]"
+text = "[center]Into the Fryer[/center]"
 
 [node name="SpaceBetweenTitleAndButtons" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 25)
