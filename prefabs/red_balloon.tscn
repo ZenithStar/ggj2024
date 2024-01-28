@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwa7o0qrrin05"]
+
+[ext_resource type="Texture2D" uid="uid://dag5lpr51msgo" path="res://assets/balloon_red.png" id="1_txsjl"]
+[ext_resource type="Script" path="res://scripts/LimitDistanceToTarget.gd" id="2_j3nqf"]
+[ext_resource type="Script" path="res://scripts/TargetManager.gd" id="3_xmgu3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72rau"]
+radius = 19.2236
+height = 51.0633
+
+[node name="RedBalloon" type="Area2D"]
+position = Vector2(-1, 0)
+scale = Vector2(2.31054, 2.31054)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 12)
+scale = Vector2(0.112851, 0.112851)
+texture = ExtResource("1_txsjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.4328, 0.8656)
+rotation = -0.225147
+scale = Vector2(0.971982, 0.991047)
+shape = SubResource("CapsuleShape2D_72rau")
+
+[node name="LimitDistanceToTarget" type="Node" parent="."]
+script = ExtResource("2_j3nqf")
+
+[node name="TargetManager" type="Node" parent="."]
+script = ExtResource("3_xmgu3")

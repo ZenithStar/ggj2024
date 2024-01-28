@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ya4oi5o5wcld"]
+[gd_scene load_steps=13 format=3 uid="uid://ya4oi5o5wcld"]
 
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kyi40"]
 [ext_resource type="Script" path="res://scripts/Clock.gd" id="2_cdfun"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/ProjectileSpawner.gd" id="2_u5ejm"]
 [ext_resource type="Script" path="res://scripts/EnemySpawner.gd" id="3_58hcw"]
 [ext_resource type="Script" path="res://scripts/DefaultPhysics.gd" id="4_upy5q"]
+[ext_resource type="Script" path="res://scripts/CollectibleSpawner.gd" id="5_mah1a"]
 [ext_resource type="Script" path="res://scripts/ExperienceVacuum.gd" id="6_acjrj"]
 [ext_resource type="Script" path="res://scripts/ExperienceAccumulator.gd" id="6_pn75x"]
 [ext_resource type="PackedScene" uid="uid://btjpjbvbo5wh5" path="res://prefabs/health_component.tscn" id="8_togqh"]
@@ -49,6 +50,10 @@ script = ExtResource("2_u5ejm")
 [node name="EnemySpawner" type="Timer" parent="."]
 wait_time = 0.1
 script = ExtResource("3_58hcw")
+
+[node name="CollectibleSpawner" type="Timer" parent="."]
+wait_time = 10.0
+script = ExtResource("5_mah1a")
 
 [node name="PlayerAim" type="Node" parent="."]
 script = ExtResource("2_e5tot")

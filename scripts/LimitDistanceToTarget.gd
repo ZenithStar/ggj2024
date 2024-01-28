@@ -10,7 +10,9 @@ class_name LimitDistanceToTarget extends Node
 @export var spawn_distance: float = 1200.0
 
 func _physics_process(_delta):
-	if target:
-		var offset = get_parent().global_position - target.global_position
-		if offset.length() > max_distance: # teleport to the opposite side
-			get_parent().global_position = target.global_position - offset.normalized() * spawn_distance
+	if not target:
+		return
+		
+	var offset = get_parent().global_position - target.global_position
+	if offset.length() > max_distance: # teleport to the opposite side
+		get_parent().global_position = target.global_position - offset.normalized() * spawn_distance
