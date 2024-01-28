@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dk1b5q0xw0n4l"]
 
-[ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kumwn"]
+[ext_resource type="Texture2D" uid="uid://cy2b3f4dhdltc" path="res://assets/sauce_projectile_v3.png" id="1_vkob1"]
 [ext_resource type="Script" path="res://scripts/Lifespan.gd" id="2_y1rix"]
 [ext_resource type="Script" path="res://scripts/LinearVelocity.gd" id="3_b3bh7"]
 [ext_resource type="Script" path="res://scripts/OnHit.gd" id="4_plbtr"]
@@ -14,9 +14,9 @@ monitorable = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-rotation = 1.5708
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_kumwn")
+position = Vector2(-2.75, -0.5)
+scale = Vector2(0.08625, 0.121951)
+texture = ExtResource("1_vkob1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7obik")
