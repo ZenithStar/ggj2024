@@ -8,12 +8,12 @@ collision_layer = 0
 monitorable = false
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-z_index = 7
+position = Vector2(1, 0)
 color = Color(0.4, 0.72549, 0.0745098, 0.501961)
-polygon = PackedVector2Array(-1, 0, 60, -40, 60, 40)
+polygon = PackedVector2Array(-1, 0, 149, -60, 149, 60)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(0, 0, 60, 40, 60, -40)
+polygon = PackedVector2Array(0, 0, 150, 60, 150, -60)
 
 [node name="Lifespan" type="Timer" parent="."]
 wait_time = 0.1
