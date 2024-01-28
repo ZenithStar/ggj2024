@@ -56,6 +56,9 @@ var ACTIVE_UPGRADES: Dictionary = {
 func get_available_upgrades() -> Array[String]:
 	return _available_upgrades
 
+func get_current_level(property_name: String) -> int:
+	return current_levels[property_name] if property_name in current_levels else 0
+	
 func get_next_level(property_name: String) -> String:
 	if property_name in current_levels:
 		var output = "%d"%[current_levels[property_name] + 1]
