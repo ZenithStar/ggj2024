@@ -16,6 +16,8 @@ func _ready():
 	experience.changed.connect(update_exp)
 	update_exp()
 	experience.level_up.connect(level_up)
+	for i in 3:
+		get_node("Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection/UpgradeSelection%d"%[i]).pressed.connect(resume.bind(i))
 
 func update_clock():
 	$Control/VBoxContainer/PanelContainer/ClockLabel.text = clock.time_string()
@@ -27,11 +29,9 @@ func update_exp():
 func level_up(_level:int):
 	var upgrades = Upgrades.get_available_upgrades()
 	upgrades.shuffle()
-	for upgrade in upgrades.slice(0,3):
-		var button = upgrade_select_panel.instantiate()
-		button.property_name = upgrade
-		$Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection.add_child(button)
-		button.pressed.connect(resume)
+	for i in 3:
+		var button = get_node("Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection/UpgradeSelection%d"%[i])
+		button.property_name = upgrades[i]
 	GuiTransitions.update()
 	get_tree().paused = true
 	pause_menu.enabled = false
@@ -39,13 +39,9 @@ func level_up(_level:int):
 	GuiTransitions.show.call_deferred("level_up_options")
 	$Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection.get_child(0).grab_focus()
 
-func resume():
+func resume(index):
+	Upgrades.level_up(Upgrades.get_available_upgrades()[index])
 	GuiTransitions.hide("level_up_options")
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	get_tree().paused = false
 	pause_menu.enabled = true
-	get_tree().create_timer(1.0).timeout.connect(clear_upgrade_buttons)
-
-func clear_upgrade_buttons():
-	for child in $Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection.get_children():
-		child.queue_free()

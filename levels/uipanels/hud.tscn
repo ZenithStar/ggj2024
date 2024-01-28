@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcveciqax0v75"]
+[gd_scene load_steps=5 format=3 uid="uid://bcveciqax0v75"]
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_fqi2e"]
 [ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_0sien"]
+[ext_resource type="PackedScene" uid="uid://bkgavysh5a7l0" path="res://prefabs/upgrade_selection.tscn" id="3_fsw3f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p7pok"]
 
@@ -72,8 +73,6 @@ script = ExtResource("2_0sien")
 auto_start = 0
 animation_enter = 2
 animation_leave = 3
-duration = 0.5
-delay = 0.0
 transition_type = "BOUNCE"
 ease_type = "OUT"
 layout = NodePath("..")
@@ -93,3 +92,12 @@ theme_override_constants/margin_right = 128
 [node name="UpgradesSelection" type="HBoxContainer" parent="Control/VBoxContainer/LevelUp/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+
+[node name="UpgradeSelection0" parent="Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection" instance=ExtResource("3_fsw3f")]
+layout_mode = 2
+
+[node name="UpgradeSelection1" parent="Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection" instance=ExtResource("3_fsw3f")]
+layout_mode = 2
+
+[node name="UpgradeSelection2" parent="Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection" instance=ExtResource("3_fsw3f")]
+layout_mode = 2

@@ -48,6 +48,15 @@ var ACTIVE_UPGRADES: Dictionary = {
 func get_available_upgrades() -> Array[String]:
 	return _available_upgrades
 
+func get_next_level(property_name: String) -> String:
+	if property_name in current_levels:
+		var output = "%d"%[current_levels[property_name] + 1]
+		if current_levels[property_name] + 1 == get_data(property_name)["max_level"]:
+			output += " (MAX)"
+		return output
+	else:
+		return "1"
+
 func _init():
 	for upgrade in PASSIVE_UPGRADES.keys():
 		add_user_signal("%s_changed"%[upgrade])

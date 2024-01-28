@@ -60,6 +60,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("2_nb77h")
 
+[node name="Level" type="Label" parent="MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "Level 0"
+horizontal_alignment = 1
+
 [node name="Tooltip" type="Label" parent="MarginContainer/HFlowContainer"]
 custom_minimum_size = Vector2(162, 0)
 layout_mode = 2
