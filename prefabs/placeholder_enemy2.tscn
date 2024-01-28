@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://b8vppdy2n47l7"]
+[gd_scene load_steps=14 format=3 uid="uid://b8vppdy2n47l7"]
 
 [ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="1_btuya"]
 [ext_resource type="Script" path="res://scripts/EnemyProjectileSpawner.gd" id="1_mjtat"]
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="2_cdcrn"]
+[ext_resource type="Texture2D" uid="uid://df83tsjew5b0k" path="res://assets/old_karen.png" id="3_bh8qf"]
 [ext_resource type="Script" path="res://scripts/TargetManager.gd" id="3_dj4l2"]
 [ext_resource type="Script" path="res://scripts/LimitDistanceToTarget.gd" id="4_whh06"]
 [ext_resource type="Script" path="res://scripts/MoveTowardsTarget2.gd" id="5_blhgp"]
@@ -33,9 +34,10 @@ script = ExtResource("1_mjtat")
 modulate = Color(1, 0.207843, 0.831373, 1)
 z_index = 5
 material = ExtResource("1_btuya")
-rotation = 1.5708
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_cdcrn")
+position = Vector2(0, -1)
+rotation = -1.5708
+scale = Vector2(0.243035, 0.211012)
+texture = ExtResource("3_bh8qf")
 
 [node name="LArm" type="Sprite2D" parent="Sprite2D"]
 z_index = -1
