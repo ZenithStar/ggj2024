@@ -29,6 +29,7 @@ func update_exp():
 	$Control/VBoxContainer/ProgressBar/LevelLabel.text = "Level: %d "%[experience.level+1]
 
 func level_up(_level:int):
+	$AudioStreamPlayer.play()
 	var upgrades = Upgrades.get_available_upgrades()
 	upgrades.shuffle()
 	for i in 3:

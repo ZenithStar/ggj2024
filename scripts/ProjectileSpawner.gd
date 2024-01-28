@@ -3,12 +3,13 @@ class_name ProjectileSpawner extends Timer
 @export var projectile_scene: PackedScene = preload("res://prefabs/placeholder_projectile.tscn")
 @export var spray_variance: float = PI/16.0
 @export var momentum_reaction_ratio: float = 0.01
-@export var level_scaling: float = 15.0
+@export var level_scaling: float = 5.0
+@export var level_offset: float = 5.0
 
 func _ready():
 	timeout.connect(spawn)
 	Upgrades.connect("front_spray_changed", _upgrade_weapon)
-	set_wait_time( 1.0 / level_scaling )
+	set_wait_time( 1.0 / (level_offset + level_scaling ) )
 	start()
 
 func spawn():
