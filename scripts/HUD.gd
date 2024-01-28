@@ -43,6 +43,7 @@ func level_up(_level:int):
 
 func resume(index):
 	Upgrades.level_up(Upgrades.get_available_upgrades()[index])
+	update_upgrade_icons()
 	GuiTransitions.hide("level_up_options")
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	get_tree().paused = false

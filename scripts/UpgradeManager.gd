@@ -23,12 +23,12 @@ var PASSIVE_UPGRADES: Dictionary = {
 			"flavor_text": "Knock back a few shots before the next shift",
 			"tooltip": "5% less delay after abilities", "scaling": Scaling.EXPONENTIAL, "value_per_level": 0.95, "max_level": 5
 		},
-	"vacuum_range" : { "name": "vacuum_range", "icon": preload("res://assets/squeegee.png"), "flavor_name": "Squeegee sceptre",
-			"flavor_text": "Lap up litter like a king",
+	"vacuum_range" : { "name": "vacuum_range", "icon": preload("res://assets/squeegee.png"), "flavor_name": "Vacuum Power",
+			"flavor_text": "Work sucks, but can it suck even harder?",
 			"tooltip": "50% increased pick-up range", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": 0.5, "max_level": 5
 		},
-	"armor" : { "name": "armor", "icon": preload("res://assets/polo.png"), "flavor_name": "Manager Polo",
-			"flavor_text": "Customer feedback is now even less effective",
+	"armor" : { "name": "armor", "icon": preload("res://assets/polo.png"), "flavor_name": "More Armor",
+			"flavor_text": "Who says you don't need a bulletproof vest in your costume?",
 			"tooltip": "10% reduced damage taken", "scaling": Scaling.MULTIPLICATIVE, "value_per_level": -0.1, "max_level": 5
 		},
 	"max_health" : { "name": "max_health", "icon": preload("res://assets/lunch_break.png"), "flavor_name": "Lunch break",
