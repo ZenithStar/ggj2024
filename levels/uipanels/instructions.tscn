@@ -1,11 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dng64pevej5wx"]
+[gd_scene load_steps=3 format=3 uid="uid://dng64pevej5wx"]
 
-[ext_resource type="Texture2D" uid="uid://mb6mjehth7i7" path="res://assets/TileFloor_V1.png" id="1_kor5d"]
 [ext_resource type="Script" path="res://scripts/instructions.gd" id="1_lyjs4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bedx1"]
-atlas = ExtResource("1_kor5d")
-region = Rect2(206.019, 211.247, 1477.71, 827.816)
+[ext_resource type="Texture2D" uid="uid://bpsx257rm2mvh" path="res://assets/TileFloor_V2.png" id="2_x32iv"]
 
 [node name="Instructions" type="Control"]
 layout_mode = 3
@@ -23,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AtlasTexture_bedx1")
+texture = ExtResource("2_x32iv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ya4oi5o5wcld" path="res://prefabs/player.tscn" id="1_0h4wr"]
 [ext_resource type="Script" path="res://levels/survivors_level.gd" id="1_bw84k"]
 [ext_resource type="PackedScene" uid="uid://c1ytgs7iese5" path="res://levels/uipanels/pause_menu.tscn" id="1_pu2xq"]
-[ext_resource type="Texture2D" uid="uid://mb6mjehth7i7" path="res://assets/TileFloor_V1.png" id="2_wr0bw"]
+[ext_resource type="Texture2D" uid="uid://bpsx257rm2mvh" path="res://assets/TileFloor_V2.png" id="3_drflq"]
 [ext_resource type="PackedScene" uid="uid://bcveciqax0v75" path="res://levels/uipanels/hud.tscn" id="4_w1ili"]
 [ext_resource type="AudioStream" uid="uid://dxjwtxci5fnhb" path="res://assets/GameJam-Theme-Song-Loop.Jan2024-version5.mp3" id="6_kye0u"]
 
@@ -14,7 +14,10 @@ script = ExtResource("1_bw84k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
-texture = ExtResource("2_wr0bw")
+texture_repeat = 2
+texture = ExtResource("3_drflq")
+region_enabled = true
+region_rect = Rect2(0, 0, 8171, 8168)
 
 [node name="HUD" parent="." instance=ExtResource("4_w1ili")]
 layer = 10
