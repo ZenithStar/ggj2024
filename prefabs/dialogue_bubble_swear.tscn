@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://pkgdhedpqckr"]
+[gd_scene load_steps=5 format=3 uid="uid://pkgdhedpqckr"]
 
 [ext_resource type="Texture2D" uid="uid://dp5ev7mn8p84t" path="res://assets/dialogue_bubble_swearing.webp" id="1_n2ca1"]
 [ext_resource type="Script" path="res://scripts/dialogue_bubble.gd" id="1_o1sfw"]
+[ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="2_c7o3a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hadgn"]
 atlas = ExtResource("1_n2ca1")
@@ -10,6 +11,7 @@ region = Rect2(161.297, 194.482, 603.635, 624.857)
 [node name="DialogueBubbleSwear" type="Node2D"]
 script = ExtResource("1_o1sfw")
 
-[node name="StaticBubbleGraphic" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_c7o3a")
 position = Vector2(-296, -309)
 texture = SubResource("AtlasTexture_hadgn")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cn0gxo7j1uvce"]
+[gd_scene load_steps=5 format=3 uid="uid://cn0gxo7j1uvce"]
 
 [ext_resource type="Texture2D" uid="uid://ctt0t0dixht3e" path="res://assets/wide_dialogue_bubble.webp" id="1_p86js"]
 [ext_resource type="Script" path="res://scripts/dialogue_bubble.gd" id="1_r2c45"]
+[ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="2_8ottv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37hhn"]
 atlas = ExtResource("1_p86js")
@@ -11,6 +12,7 @@ region = Rect2(17, 13.5, 550, 288)
 script = ExtResource("1_r2c45")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_8ottv")
 position = Vector2(-278, -148)
 texture = SubResource("AtlasTexture_37hhn")
 
