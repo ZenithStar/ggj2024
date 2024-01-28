@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cms4d6ufwbu32"]
+[gd_scene load_steps=7 format=3 uid="uid://ctl7sxrm428tv"]
 
 [ext_resource type="Script" path="res://scripts/enemy_projectile.gd" id="1_jdgmv"]
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_qygmq"]
@@ -33,9 +33,8 @@ script = ExtResource("2_6iiyf")
 
 [node name="LinearVelocity" type="Node" parent="."]
 script = ExtResource("3_4xymg")
-velocity = 700.0
 
 [node name="OnHit" type="Node" parent="."]
 script = ExtResource("4_hfk5r")
-damage_min_range = 8.0
-damage_max_range = 12.0
+damage_min_range = 5.0
+damage_max_range = 10.0

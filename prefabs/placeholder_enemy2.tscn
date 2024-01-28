@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b8vppdy2n47l7"]
+[gd_scene load_steps=13 format=3 uid="uid://b8vppdy2n47l7"]
 
 [ext_resource type="Material" uid="uid://dvyms376jliuo" path="res://materials/dissolve_material.tres" id="1_btuya"]
 [ext_resource type="Script" path="res://scripts/EnemyProjectileSpawner.gd" id="1_mjtat"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/HealthComponent.gd" id="6_ks376"]
 [ext_resource type="Script" path="res://scripts/EnemyOnDeath.gd" id="7_12q31"]
 [ext_resource type="PackedScene" uid="uid://nip75bkwf31j" path="res://prefabs/small_experience.tscn" id="8_55npd"]
+[ext_resource type="AudioStream" uid="uid://bvfkvqrif13ht" path="res://assets/player_hit.ogg" id="10_5tchr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d5v8"]
 size = Vector2(50, 50)
@@ -25,7 +26,6 @@ shape = SubResource("RectangleShape2D_0d5v8")
 position = Vector2(82, 0)
 
 [node name="EnemyProjectileSpawner" type="Timer" parent="."]
-wait_time = 3.0
 script = ExtResource("1_mjtat")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -81,3 +81,9 @@ script = ExtResource("6_ks376")
 [node name="EnemyOnDeath" type="Node" parent="."]
 script = ExtResource("7_12q31")
 spawn_on_death = ExtResource("8_55npd")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_5tchr")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="AudioStreamPlayer2D"]
+current = true

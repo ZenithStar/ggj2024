@@ -63,15 +63,51 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "Kills: 4566 "
 
-[node name="GuiTransition" type="Node" parent="Control/VBoxContainer"]
-script = ExtResource("2_0sien")
+[node name="LevelUp" type="Control" parent="Control/VBoxContainer"]
+layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control/VBoxContainer/GuiTransition"]
-offset_left = 620.0
-offset_top = 106.0
-offset_right = 660.0
-offset_bottom = 146.0
-size_flags_horizontal = 4
+[node name="GuiTransition" type="Node" parent="Control/VBoxContainer/LevelUp"]
+script = ExtResource("2_0sien")
+auto_start = 0
+animation_enter = 6
+animation_leave = 6
+transition_type = "ELASTIC"
+layout = NodePath("..")
+group = NodePath("../MarginContainer/VBoxContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/LevelUp"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 128
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/LevelUp/MarginContainer"]
+layout_mode = 2
+
+[node name="UpgradeSlot1" type="NinePatchRect" parent="Control/VBoxContainer/LevelUp/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_18484")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="UpgradeSlot2" type="NinePatchRect" parent="Control/VBoxContainer/LevelUp/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_18484")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="UpgradeSlot3" type="NinePatchRect" parent="Control/VBoxContainer/LevelUp/MarginContainer/VBoxContainer"]
+layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("2_18484")
 patch_margin_left = 20
