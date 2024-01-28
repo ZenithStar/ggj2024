@@ -38,3 +38,4 @@ script = ExtResource("3_4xymg")
 script = ExtResource("4_hfk5r")
 damage_min_range = 5.0
 damage_max_range = 10.0
+knockback_distance = 1.0
