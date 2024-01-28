@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2nprs2p6qgpw"]
+
+[ext_resource type="Texture2D" uid="uid://cfq3k5g3sdr1p" path="res://assets/hard_liquor.png" id="1_rlygg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kyyt"]
+size = Vector2(12.8375, 25.245)
+
+[node name="HardLiquor" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.22845, -0.0533447)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("1_rlygg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.48141, 3.51416)
+rotation = 0.445059
+scale = Vector2(5.225, 5.225)
+shape = SubResource("RectangleShape2D_8kyyt")

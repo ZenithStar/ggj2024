@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/TargetManager.gd" id="3_xmgu3"]
 [ext_resource type="Script" path="res://scripts/HealthComponent.gd" id="4_y2f2n"]
 [ext_resource type="Script" path="res://scripts/EnemyOnDeath.gd" id="5_77gvk"]
-[ext_resource type="PackedScene" uid="uid://nip75bkwf31j" path="res://prefabs/small_experience.tscn" id="6_5r0rv"]
+[ext_resource type="PackedScene" uid="uid://d2nprs2p6qgpw" path="res://prefabs/hard_liquor.tscn" id="7_w8ocn"]
 [ext_resource type="AudioStream" uid="uid://coqyu7dabd8as" path="res://assets/popping.ogg" id="8_300ia"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72rau"]
@@ -29,6 +29,11 @@ rotation = -0.225147
 scale = Vector2(0.971982, 0.991047)
 shape = SubResource("CapsuleShape2D_72rau")
 
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(0.209102, -0.104155)
+rotation = -0.225147
+scale = Vector2(0.971982, 0.991047)
+
 [node name="LimitDistanceToTarget" type="Node" parent="."]
 script = ExtResource("2_j3nqf")
 
@@ -46,7 +51,7 @@ script = ExtResource("4_y2f2n")
 
 [node name="EnemyOnDeath" type="Node" parent="."]
 script = ExtResource("5_77gvk")
-spawn_on_death = ExtResource("6_5r0rv")
+spawn_on_death = ExtResource("7_w8ocn")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_300ia")
