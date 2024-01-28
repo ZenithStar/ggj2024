@@ -1,6 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1ytgs7iese5"]
+[gd_scene load_steps=4 format=3 uid="uid://c1ytgs7iese5"]
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_pllta"]
+
+[sub_resource type="GDScript" id="GDScript_d5qlg"]
+script/source = "extends Control
+
+func _notification(what):
+	match what:
+		NOTIFICATION_VISIBILITY_CHANGED:
+			if visible:
+				$PanelContainer/VBoxContainer/Button.grab_focus()
+				
+"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50an7"]
 bg_color = Color(0.101961, 0.0941176, 0.223529, 0.784314)
@@ -32,6 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = SubResource("GDScript_d5qlg")
 
 [node name="PanelContainer" type="PanelContainer" parent="PauseMenu"]
 layout_mode = 1

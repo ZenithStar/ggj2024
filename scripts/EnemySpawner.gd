@@ -30,21 +30,6 @@ func instantiate_base_karen():
 			text_bubble.scale = Vector2(0.3, 0.3)
 			temp_enemy.add_child(text_bubble)
 	return temp_enemy
-	
-func instantiate_enemy2(position: Vector2):
-	var temp_enemy = enemy_scene2.instantiate()
-	if true_some_percent_of_time(5): 
-		if true_some_percent_of_time(50):
-			var swear_bubble = dialogue_bubble_swear.instantiate()
-			swear_bubble.name = "Dialog"
-			swear_bubble.scale = Vector2(0.2, 0.2)
-			temp_enemy.add_child(swear_bubble)
-		else:
-			var text_bubble = dialogue_bubble_text.instantiate()
-			text_bubble.name = "Dialog"
-			text_bubble.scale = Vector2(0.3, 0.3)
-			temp_enemy.add_child(text_bubble)
-	return temp_enemy
 
 func spawn():
 	if randi_range(0,max_enemies) > get_child_count():
