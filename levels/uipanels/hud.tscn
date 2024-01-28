@@ -1,10 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcveciqax0v75"]
+[gd_scene load_steps=6 format=3 uid="uid://bcveciqax0v75"]
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_fqi2e"]
 [ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_0sien"]
 [ext_resource type="PackedScene" uid="uid://bkgavysh5a7l0" path="res://prefabs/upgrade_selection.tscn" id="3_fsw3f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p7pok"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_etxry"]
+font_size = 24
+font_color = Color(0.886275, 0.266667, 0.247059, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.313726)
+shadow_offset = Vector2(2, 2)
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_fqi2e")
@@ -53,15 +60,15 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 48
 text = "0:00"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/VBoxContainer/PanelContainer"]
+[node name="UpgradeIcons" type="HFlowContainer" parent="Control/VBoxContainer/PanelContainer"]
 layout_mode = 2
-text = "upgrades go here?"
 
 [node name="KillLabel" type="Label" parent="Control/VBoxContainer/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "Kills: 4566 "
+label_settings = SubResource("LabelSettings_etxry")
 
 [node name="LevelUp" type="Control" parent="Control/VBoxContainer"]
 process_mode = 3

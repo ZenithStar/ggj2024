@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var upgrade_select_panel: PackedScene = preload("res://prefabs/upgrade_selection.tscn")
+var upgrade_icon_panel: PackedScene = preload("res://prefabs/upgrade_icon.tscn")
 
 var player
 var pause_menu
@@ -16,6 +17,7 @@ func _ready():
 	experience.changed.connect(update_exp)
 	update_exp()
 	experience.level_up.connect(level_up)
+	Globals.kill_count_changed.connect(update_kill_count)
 	for i in 3:
 		get_node("Control/VBoxContainer/LevelUp/MarginContainer/UpgradesSelection/UpgradeSelection%d"%[i]).pressed.connect(resume.bind(i))
 
@@ -45,3 +47,17 @@ func resume(index):
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	get_tree().paused = false
 	pause_menu.enabled = true
+
+func update_upgrade_icons():
+	for key in Upgrades.current_levels.keys():
+		var panel = $Control/VBoxContainer/PanelContainer/UpgradeIcons.find_child(key.to_pascal_case())
+		if panel:
+			panel.update()
+		else:
+			var icon = upgrade_icon_panel.instantiate()
+			icon.name = key.to_pascal_case()
+			icon.property_name = key
+			$Control/VBoxContainer/PanelContainer/UpgradeIcons.add_child(icon)
+
+func update_kill_count():
+	$Control/VBoxContainer/PanelContainer/KillLabel.text = "Kills: %d "%[Globals.kill_count]

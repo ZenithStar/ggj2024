@@ -15,6 +15,7 @@ func on_death():
 		$"../GenericShadow".visible = false
 	var tween = create_tween().bind_node(self)
 	$"../CollisionShape2D".set_deferred("disabled", true)
+	Globals.kill_count += 1
 	tween.tween_method(func(val): $"../Sprite2D".material.set_shader_parameter("dissolve_value", val), 1.0, 0.0, 1.0)
 	tween.tween_callback(get_parent().queue_free)
 	
