@@ -10,7 +10,7 @@ func _ready():
 
 func spawn():
 	var new_proj = projectile_scene.instantiate()
-	new_proj.rotation = get_parent().rotation + PI/2
-	new_proj.position = $"../SpawnPointRight".global_position
-	get_parent().velocity -= Vector2.from_angle(new_proj.rotation) * velocity
+	new_proj.rotation = get_parent().rotation + PI
+	new_proj.position = $"../SpawnPointRear".global_position
+	get_parent().velocity += Vector2.from_angle(get_parent().rotation) * velocity
 	add_child(new_proj)

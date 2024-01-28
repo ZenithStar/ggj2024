@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://0ytxvvvlk4pa"]
+[gd_scene load_steps=7 format=3 uid="uid://0ytxvvvlk4pa"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_604ml"]
 [ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_ke67k"]
-[ext_resource type="Texture2D" uid="uid://bswig158fd1h2" path="res://assets/1701292276736245.jpg" id="2_ver5q"]
+[ext_resource type="Texture2D" uid="uid://dy1hqmwa73vsm" path="res://assets/8ca2767d-d9a8-4b37-949a-815911324075-profile_image-300x300.png" id="3_ns25f"]
+[ext_resource type="Texture2D" uid="uid://fy1w0b6pjpum" path="res://assets/075.jpg" id="4_16olo"]
 [ext_resource type="PackedScene" uid="uid://c88l7nnkllhr0" path="res://levels/uipanels/credits.tscn" id="4_hjeaj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_38pi2"]
@@ -83,14 +84,32 @@ text = "Instructions"
 layout_mode = 2
 text = "Credits"
 
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/SplitScreen/ButtonContainer/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("3_ns25f")
+expand_mode = 2
+stretch_mode = 2
+
 [node name="ImageContainerPlaceholder" type="VBoxContainer" parent="MarginContainer/VBoxContainer/SplitScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/SplitScreen/ImageContainerPlaceholder"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/SplitScreen/ImageContainerPlaceholder"]
 layout_mode = 2
-texture = ExtResource("2_ver5q")
-expand_mode = 4
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/SplitScreen/ImageContainerPlaceholder/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("4_16olo")
+expand_mode = 5
 
 [node name="Credits" parent="." instance=ExtResource("4_hjeaj")]
 visible = false
