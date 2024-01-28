@@ -32,3 +32,5 @@ script = ExtResource("3_b3bh7")
 
 [node name="OnHit" type="Node" parent="."]
 script = ExtResource("4_plbtr")
+damage_min_range = 35.0
+damage_max_range = 50.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ya4oi5o5wcld"]
+[gd_scene load_steps=19 format=3 uid="uid://ya4oi5o5wcld"]
 
 [ext_resource type="AudioStream" uid="uid://cve74whj61dyg" path="res://assets/player_hit.ogg" id="1_bdfp3"]
 [ext_resource type="Texture2D" uid="uid://bbrqbvquvihtd" path="res://icon.svg" id="1_kyi40"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/EnemySpawner.gd" id="3_58hcw"]
 [ext_resource type="Script" path="res://scripts/BeamSpawner.gd" id="4_p6f2w"]
 [ext_resource type="Script" path="res://scripts/DefaultPhysics.gd" id="4_upy5q"]
+[ext_resource type="Script" path="res://scripts/BlastSpawner.gd" id="5_3f2le"]
 [ext_resource type="Script" path="res://scripts/CollectibleSpawner.gd" id="5_mah1a"]
 [ext_resource type="Script" path="res://scripts/ExperienceVacuum.gd" id="6_acjrj"]
 [ext_resource type="Script" path="res://scripts/ExperienceAccumulator.gd" id="6_pn75x"]
@@ -48,12 +49,18 @@ position = Vector2(32, 0)
 [node name="SpawnPointLeft" type="Node2D" parent="."]
 position = Vector2(0, -32)
 
+[node name="SpawnPointRight" type="Node2D" parent="."]
+position = Vector2(0, 32)
+
 [node name="Clock" type="Timer" parent="."]
 script = ExtResource("2_cdfun")
 
 [node name="ProjectileSpawner" type="Timer" parent="."]
 wait_time = 0.05
 script = ExtResource("2_u5ejm")
+
+[node name="RightProjectileSpawner" type="Timer" parent="."]
+script = ExtResource("5_3f2le")
 
 [node name="LeftBeamSpawner" type="Timer" parent="."]
 wait_time = 0.2
