@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://dng64pevej5wx"]
+[gd_scene load_steps=3 format=3 uid="uid://dng64pevej5wx"]
+
+[ext_resource type="Texture2D" uid="uid://mb6mjehth7i7" path="res://assets/TileFloor_V1.png" id="1_kor5d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bedx1"]
+atlas = ExtResource("1_kor5d")
+region = Rect2(206.019, 211.247, 1477.71, 827.816)
 
 [node name="Instructions" type="Control"]
 layout_mode = 3
@@ -8,11 +14,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_bedx1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -239.0
+offset_bottom = 239.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -40,6 +67,7 @@ layout_mode = 2
 [node name="goal" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 20
 text = "Goal: Level up and try to stay alive against the masses!"
 
 [node name="Spacing 2" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
@@ -113,7 +141,9 @@ custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="ReferenceRect2" type="ReferenceRect" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 25)
