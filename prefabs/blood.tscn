@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddnu6p443bjwo"]
+[gd_scene load_steps=6 format=3 uid="uid://mhtionp7h8p"]
 
 [ext_resource type="Texture2D" uid="uid://cchtdoe2e3e27" path="res://assets/dot_small.png" id="1_y1tqj"]
 [ext_resource type="Script" path="res://scripts/blood.gd" id="2_u5nlu"]
@@ -25,6 +25,7 @@ turbulence_enabled = true
 turbulence_noise_strength = 4.58
 
 [node name="GPUParticles2D" type="GPUParticles2D"]
+process_mode = 3
 modulate = Color(0.768627, 0, 0.152941, 1)
 self_modulate = Color(0.686275, 0, 0, 1)
 amount = 761
@@ -34,5 +35,7 @@ explosiveness = 1.0
 script = ExtResource("2_u5nlu")
 
 [node name="LifetimeTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
 
 [connection signal="timeout" from="LifetimeTimer" to="." method="_on_lifetime_timer_timeout"]
