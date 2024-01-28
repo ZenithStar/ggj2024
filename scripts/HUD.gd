@@ -51,7 +51,7 @@ func resume(index):
 
 func update_upgrade_icons():
 	for key in Upgrades.current_levels.keys():
-		var panel = $Control/VBoxContainer/PanelContainer/UpgradeIcons.find_child(key.to_pascal_case())
+		var panel = $Control/VBoxContainer/PanelContainer/UpgradeIcons.find_child(key.to_pascal_case(), false, false)
 		if panel:
 			panel.update()
 		else:

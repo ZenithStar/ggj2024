@@ -11,6 +11,9 @@ func tick():
 	_elapsed += 1
 	if _elapsed%60 == 0:
 		minute.emit()
+		
+func elapsed():
+	return _elapsed
 
 func time_string() -> String:
 	return "%2s:%02d"%[_elapsed/60,_elapsed%60]
