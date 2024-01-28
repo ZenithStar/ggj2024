@@ -38,11 +38,11 @@ func get_max_enemies():
 	if sec <= 30:
 		return 12
 	elif sec <= 60:
-		return 20
+		return 25
 	elif sec <= 90:
-		return 35
-	else:
 		return 50
+	else:
+		return 80
 	
 func get_easier_enemy_chance():
 	var sec = get_elapsed_seconds()
