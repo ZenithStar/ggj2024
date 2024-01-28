@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dng64pevej5wx"]
+[gd_scene load_steps=4 format=3 uid="uid://dng64pevej5wx"]
 
 [ext_resource type="Texture2D" uid="uid://mb6mjehth7i7" path="res://assets/TileFloor_V1.png" id="1_kor5d"]
+[ext_resource type="Script" path="res://scripts/instructions.gd" id="1_lyjs4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bedx1"]
 atlas = ExtResource("1_kor5d")
@@ -13,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lyjs4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -153,3 +155,5 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Back to Main Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackToMainMenu" to="." method="_on_back_to_main_menu_pressed"]

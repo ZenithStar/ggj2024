@@ -21,7 +21,7 @@ func _on_new_game_pressed():
 
 
 func _on_instructions_pressed():
-	pass#get_tree().change_scene_to_file("res://levels/uipanels/instructions.tscn")
+	get_tree().change_scene_to_file("res://levels/uipanels/instructions.tscn")
 
 
 func _on_credits_pressed():

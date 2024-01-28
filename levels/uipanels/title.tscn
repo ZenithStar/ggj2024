@@ -67,7 +67,6 @@ text = "Start"
 
 [node name="Instructions" type="Button" parent="CenterContainer/PanelContainer/ButtonContainer"]
 layout_mode = 2
-disabled = true
 text = "Instructions"
 
 [node name="Credits" type="Button" parent="CenterContainer/PanelContainer/ButtonContainer"]
