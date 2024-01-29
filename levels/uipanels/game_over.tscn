@@ -3,12 +3,10 @@
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_lpydd"]
 
 [node name="GameOverOverlay" type="CanvasLayer"]
-process_mode = 3
 layer = 110
 script = ExtResource("1_lpydd")
 
 [node name="GameOverMenu" type="Control" parent="."]
-process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,6 +48,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 bbcode_enabled = true
 text = "[center]you die in [s]real life[/s] Minecraft[/center]"
 

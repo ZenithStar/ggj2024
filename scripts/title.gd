@@ -1,13 +1,15 @@
 extends Control
 
 var blood = preload("res://prefabs/blood.tscn")
-var survivors_level = preload("res://levels/survivors_level.tscn")
+#var survivors_level = preload("res://levels/survivors_level.tscn")
 #var credits_level = preload("res://levels/uipanels/credits.tscn")
 func _ready():
 	var hack = blood.instantiate()
 	hack.position = get_viewport().get_visible_rect().size
 	add_child.call_deferred(hack)
 	$"CenterContainer/PanelContainer/ButtonContainer/New Game".grab_focus()
+	Experience.clear()
+	get_tree().paused = false
 
 func _notification(what):
 	match what:
@@ -17,11 +19,11 @@ func _notification(what):
 				
 func _on_new_game_pressed():
 	$Loading.visible = true
-	get_tree().change_scene_to_packed(survivors_level)
+	get_tree().change_scene_to_file.call_deferred("res://levels/survivors_level.tscn")
 
 
 func _on_instructions_pressed():
-	get_tree().change_scene_to_file("res://levels/uipanels/instructions.tscn")
+	get_tree().change_scene_to_file.call_deferred("res://levels/uipanels/instructions.tscn")
 
 
 func _on_credits_pressed():
