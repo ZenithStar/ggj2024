@@ -1,5 +1,17 @@
-# ggj2024
+# Into the Fryer
+Play here: https://xenithstar.itch.io/ggj24
 
+Patient Productions: 
+- ZenithStar
+- Dameezy
+- Eandujar
+- lunafutures
+- Chris
+- Robz
+- Aml2732
+- @itsv_asinvictory
+
+Made for Global Game Jam 2024 - Theme: "Make me laugh"
 
 # License
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
